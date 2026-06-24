@@ -1,0 +1,258 @@
+{
+  "query": "canCallClass(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_core_MethodParameter)",
+  "decision": "SUPPORTED",
+  "reason": "at least one bounded proof tree supports the query",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.0002680830657482147,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.00019845599308609962,
+    "evidence_materialization_seconds": 6.96270726621151e-05
+  },
+  "search_stats": {
+    "goal_calls": 10,
+    "edb_candidate_count": 13,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 0,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 2,
+    "termination_reason": "proof_found"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "canCallClass/2"
+    ],
+    "edb_predicates": [
+      "callsMethod/2",
+      "containsMethod/2"
+    ],
+    "dependencies": {
+      "canCallClass/2": [
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "callsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 2,
+  "evidence": [
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+        "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_getParameterType)",
+        "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_getParameterType)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_core_MethodParameter)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+            "fact": "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_getParameterType)",
+            "fact": "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_getParameterType)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_getParameterType)",
+            "fact": "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_getParameterType)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+        "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_nested)",
+        "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_nested)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_core_MethodParameter)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+            "fact": "containsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver,org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_nested)",
+            "fact": "callsMethod(org_springframework_web_reactive_result_method_annotation_HttpEntityMethodArgumentResolver_resolveArgument_MethodParameter_BindingContext_ServerWebExchange,org_springframework_core_MethodParameter_nested)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_nested)",
+            "fact": "containsMethod(org_springframework_core_MethodParameter,org_springframework_core_MethodParameter_nested)",
+            "score": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

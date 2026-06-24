@@ -1,0 +1,558 @@
+{
+  "query": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+  "decision": "SUPPORTED",
+  "reason": "at least one bounded proof tree supports the query",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.0016465869266539812,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.0015313690528273582,
+    "evidence_materialization_seconds": 0.00011521787382662296
+  },
+  "search_stats": {
+    "goal_calls": 90,
+    "edb_candidate_count": 152,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 1,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 5,
+    "termination_reason": "proof_found"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "canCallClass/2"
+    ],
+    "edb_predicates": [
+      "callsMethod/2",
+      "containsMethod/2"
+    ],
+    "dependencies": {
+      "canCallClass/2": [
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "callsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 5,
+  "evidence": [
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+        "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)",
+        "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "fact": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)",
+            "fact": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)",
+            "fact": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getLogFile)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+        "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)",
+        "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "fact": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)",
+            "fact": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)",
+            "fact": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistLocation)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+        "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)",
+        "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "fact": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)",
+            "fact": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)",
+            "fact": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistName)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+        "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)",
+        "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "fact": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)",
+            "fact": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)",
+            "fact": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPeriod)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+        "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)",
+        "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_metadata_ManagedResource)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "fact": "containsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler,org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)",
+            "fact": "callsMethod(org_springframework_jmx_export_assembler_MetadataMBeanInfoAssembler_populateMBeanDescriptor_Descriptor_Object_String,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)",
+            "fact": "containsMethod(org_springframework_jmx_export_metadata_ManagedResource,org_springframework_jmx_export_metadata_ManagedResource_getPersistPolicy)",
+            "score": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

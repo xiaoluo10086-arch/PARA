@@ -1,0 +1,358 @@
+{
+  "query": "canCallClass(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry)",
+  "decision": "SUPPORTED",
+  "reason": "at least one bounded proof tree supports the query",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.007182782981544733,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.007098786067217588,
+    "evidence_materialization_seconds": 8.399691432714462e-05
+  },
+  "search_stats": {
+    "goal_calls": 419,
+    "edb_candidate_count": 725,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 0,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 3,
+    "termination_reason": "proof_found"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "canCallClass/2"
+    ],
+    "edb_predicates": [
+      "callsMethod/2",
+      "containsMethod/2"
+    ],
+    "dependencies": {
+      "canCallClass/2": [
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "callsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 3,
+  "evidence": [
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean)",
+        "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+        "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "fact": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_doGetBeanNamesForType_ResolvableType_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean)",
+        "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+        "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "fact": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_getBeansOfType_Class_boolean_boolean,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_onSuppressedException_Exception)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition)",
+        "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)",
+        "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)"
+      ],
+      "path_programs": [
+        [
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "rev"
+          ],
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "canCallClass(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry)",
+        "rule": "canCallClass(A,B) :- containsMethod(A,V1),callsMethod(V1,V2),containsMethod(B,V2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory,org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)",
+            "fact": "callsMethod(org_springframework_beans_factory_support_DefaultListableBeanFactory_preInstantiateSingleton_String_RootBeanDefinition,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)",
+            "fact": "containsMethod(org_springframework_beans_factory_support_DefaultSingletonBeanRegistry,org_springframework_beans_factory_support_DefaultSingletonBeanRegistry_addSingletonFactory_String_ObjectFactory)",
+            "score": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

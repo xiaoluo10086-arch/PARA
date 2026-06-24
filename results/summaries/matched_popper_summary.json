@@ -1,0 +1,314 @@
+{
+  "experiment": "matched_pure_popper_baseline",
+  "case_count": 3,
+  "cases": [
+    {
+      "project": "spring",
+      "target": "canCallClass",
+      "seed": 0,
+      "split_name": "spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+      "split_dir": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+      "status": "ok",
+      "learn_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+      "rule_library": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+      "reason_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+      "elapsed_seconds": 154.02179033588618,
+      "learn": {
+        "returncode": 0,
+        "elapsed_seconds": 92.37959056417458,
+        "stdout_tail": "idate_rules\": [],\n      \"popper\": {\n        \"returncode\": 0,\n        \"elapsed_seconds\": 26.48116060416214,\n        \"rules\": [\n          \"canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\"\n        ],\n        \"error\": null,\n        \"stdout_tail\": \"********** SOLUTION **********\\nPrecision:1.00 Recall:1.00 TP:50 FN:0 TN:100 FP:0 Size:4\\ncanCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\\n******************************\",\n        \"stderr_tail\": \"20:12:16 ********************\\n20:12:16 ********************\\n20:12:16 New best hypothesis:\\n20:12:16 tp:35 fn:15 size:4\\n20:12:16 canCallClass(A,B):- importsClass(A,B).\\n20:12:16 canCallClass(A,B):- extendsClass(A,B).\\n20:12:16 ********************\\n20:12:16 Searching programs of size: 3\\n20:12:16 ********************\\n20:12:16 New best hypothesis:\\n20:12:16 tp:46 fn:4 size:5\\n20:12:16 canCallClass(A,B):- importsClass(A,B).\\n20:12:16 canCallClass(A,B):- containsClass(C,B),containsClass(C,A).\\n20:12:16 ********************\\n20:12:17 Searching programs of size: 4\\n20:12:18 ********************\\n20:12:18 New best hypothesis:\\n20:12:18 tp:50 fn:0 size:4\\n20:12:18 canCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\\n20:12:18 ********************\"\n      },\n      \"best_rule\": \"canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\",\n      \"metrics\": {\n        \"tp\": 50,\n        \"fp\": 0,\n        \"tn\": 100,\n        \"fn\": 0,\n        \"precision\": 1.0,\n        \"recall\": 1.0,\n        \"accuracy\": 1.0,\n        \"f1\": 1.0\n      },\n      \"feedback\": \"consistent\"\n    }\n  ],\n  \"outputs\": {\n    \"learned_rules\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/learned_rules.pl\",\n    \"graph_pattern\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/graph_pattern.cypher\",\n    \"explanation\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/explanation.md\"\n  },\n  \"popper_task\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/popper_task\",\n  \"popper\": {\n    \"returncode\": 0,\n    \"elapsed_seconds\": 26.48116060416214,\n    \"rules\": [\n      \"canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\"\n    ],\n    \"error\": null,\n    \"stdout_tail\": \"********** SOLUTION **********\\nPrecision:1.00 Recall:1.00 TP:50 FN:0 TN:100 FP:0 Size:4\\ncanCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\\n******************************\",\n    \"stderr_tail\": \"20:12:16 ********************\\n20:12:16 ********************\\n20:12:16 New best hypothesis:\\n20:12:16 tp:35 fn:15 size:4\\n20:12:16 canCallClass(A,B):- importsClass(A,B).\\n20:12:16 canCallClass(A,B):- extendsClass(A,B).\\n20:12:16 ********************\\n20:12:16 Searching programs of size: 3\\n20:12:16 ********************\\n20:12:16 New best hypothesis:\\n20:12:16 tp:46 fn:4 size:5\\n20:12:16 canCallClass(A,B):- importsClass(A,B).\\n20:12:16 canCallClass(A,B):- containsClass(C,B),containsClass(C,A).\\n20:12:16 ********************\\n20:12:17 Searching programs of size: 4\\n20:12:18 ********************\\n20:12:18 New best hypothesis:\\n20:12:18 tp:50 fn:0 size:4\\n20:12:18 canCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\\n20:12:18 ********************\"\n  },\n  \"program_metrics\": {\n    \"tp\": 50,\n    \"fp\": 0,\n    \"tn\": 100,\n    \"fn\": 0,\n    \"precision\": 1.0,\n    \"recall\": 1.0,\n    \"accuracy\": 1.0,\n    \"f1\": 1.0\n  }\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "baseline-popper",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/train_task",
+          "--output-dir",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+          "--timeout",
+          "300",
+          "--min-f1",
+          "0.8",
+          "--json"
+        ]
+      },
+      "export": {
+        "returncode": 0,
+        "elapsed_seconds": 0.12683792784810066,
+        "stdout_tail": "{\n  \"schema_version\": 2,\n  \"library_kind\": \"para_reasoning_rule_library\",\n  \"min_f1\": 0.8,\n  \"factor_path_helpers\": false,\n  \"rule_count\": 1,\n  \"dependency_graph\": {\n    \"idb_predicates\": [\n      \"canCallClass/2\"\n    ],\n    \"edb_predicates\": [\n      \"callsMethod/2\",\n      \"containsMethod/2\"\n    ],\n    \"dependencies\": {\n      \"canCallClass/2\": [\n        {\n          \"predicate\": \"containsMethod/2\",\n          \"kind\": \"EDB\"\n        },\n        {\n          \"predicate\": \"callsMethod/2\",\n          \"kind\": \"EDB\"\n        }\n      ]\n    },\n    \"recursive_predicates\": []\n  },\n  \"agent_role\": {\n    \"planner\": \"proposes executable path programs and rule-level subgoals\",\n    \"refiner\": \"uses proof or verifier failures to revise path programs\",\n    \"symbolic_engine\": \"executes bounded backward chaining and validates proof steps\"\n  },\n  \"rules\": [\n    {\n      \"target\": \"canCallClass/2\",\n      \"target_types\": [],\n      \"rule\": \"canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D) [0.900].\",\n      \"path_programs\": [],\n      \"f1\": 1.0,\n      \"precision\": 1.0,\n      \"recall\": 1.0,\n      \"threshold\": 0.8,\n      \"source_summary\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json\",\n      \"source_method\": \"pure_popper\",\n      \"status\": \"ok\"\n    }\n  ]\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "export-rule-library",
+          "--summary",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+          "--output",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+          "--min-f1",
+          "0.8",
+          "--json"
+        ]
+      },
+      "reason": {
+        "returncode": 0,
+        "elapsed_seconds": 61.51270810607821,
+        "stdout_tail": "query\": \"canCallClass(org_springframework_web_socket_messaging_SubProtocolHandler,org_springframework_beans_factory_xml_ResourceEntityResolver)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 0.0001464150846004486\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_server_support_OriginHandshakeInterceptor,org_springframework_web_servlet_view_groovy_GroovyMarkupConfigurer)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 0.0004401290789246559\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_sockjs_support_IframeHandler,org_springframework_beans_factory_annotation_Qualifier)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 4.371791146695614e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_sockjs_transport_SockJsSessionFactory,org_springframework_aop_AopInvocationException)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 3.877212293446064e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_sockjs_transport_TransportHandler,org_springframework_mail_MailException)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 3.7454068660736084e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_sockjs_transport_handler_XhrReceivingTransportHandler,org_springframework_beans_factory_config_TargetBeanProvider)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 6.675301119685173e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_socket_sockjs_transport_session_StreamingSockJsSession,org_springframework_web_reactive_result_method_annotation_RequestAttributeMethodArgumentResolver)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 0.0002936241216957569\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_testfixture_servlet_MockHttpSession,org_springframework_core_convert_converter_Converter_S)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 4.6686967834830284e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_testfixture_servlet_ServletFilterProxy,org_springframework_core_convert_support_StreamConverter)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 0.00016692979261279106\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_util_HtmlCharacterEntityDecoder,org_springframework_messaging_converter_StringMessageConverter)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 0.00019339099526405334\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_util_ResponseServletOutputStream,org_springframework_messaging_core_BeanFactoryMessageChannelDestinationResolver)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 9.188801050186157e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_util_pattern_PathPattern_MatchingContext,org_springframework_transaction_interceptor_MatchAlwaysTransactionAttributeSource)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 4.163198173046112e-05\n    },\n    {\n      \"query\": \"canCallClass(org_springframework_web_util_pattern_StaticRoutesPatternParser,org_springframework_web_servlet_function_DefaultSseBuilder)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 9.710900485515594e-05\n    }\n  ]\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "reason-eval",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+          "--rule-library",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+          "--threshold",
+          "0.8",
+          "--max-depth",
+          "4",
+          "--max-proofs",
+          "3",
+          "--max-states",
+          "2000",
+          "--output",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+          "--json"
+        ]
+      },
+      "train_metrics": {
+        "tp": 50,
+        "fp": 0,
+        "tn": 100,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0,
+        "f1": 1.0
+      },
+      "final_rule": "canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D) [0.900].",
+      "popper": {
+        "returncode": 0,
+        "elapsed_seconds": 26.48116060416214,
+        "rules": [
+          "canCallClass(A,B) :- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D)."
+        ],
+        "error": null,
+        "stdout_tail": "********** SOLUTION **********\nPrecision:1.00 Recall:1.00 TP:50 FN:0 TN:100 FP:0 Size:4\ncanCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\n******************************",
+        "stderr_tail": "20:12:16 ********************\n20:12:16 ********************\n20:12:16 New best hypothesis:\n20:12:16 tp:35 fn:15 size:4\n20:12:16 canCallClass(A,B):- importsClass(A,B).\n20:12:16 canCallClass(A,B):- extendsClass(A,B).\n20:12:16 ********************\n20:12:16 Searching programs of size: 3\n20:12:16 ********************\n20:12:16 New best hypothesis:\n20:12:16 tp:46 fn:4 size:5\n20:12:16 canCallClass(A,B):- importsClass(A,B).\n20:12:16 canCallClass(A,B):- containsClass(C,B),containsClass(C,A).\n20:12:16 ********************\n20:12:17 Searching programs of size: 4\n20:12:18 ********************\n20:12:18 New best hypothesis:\n20:12:18 tp:50 fn:0 size:4\n20:12:18 canCallClass(A,B):- containsMethod(A,C),containsMethod(B,D),callsMethod(C,D).\n20:12:18 ********************"
+      },
+      "held_out": {
+        "examples": 450,
+        "positive_examples": 150,
+        "negative_examples": 300,
+        "supported_precision": 1.0,
+        "supported_recall": 1.0,
+        "negative_non_support_rate": 1.0,
+        "inconclusive_rate": 0.6666666666666666,
+        "held_out_accuracy": 1.0
+      }
+    },
+    {
+      "project": "spring",
+      "target": "isAllowedToUse",
+      "seed": 0,
+      "split_name": "spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5",
+      "split_dir": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5",
+      "status": "failed",
+      "learn_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5",
+      "rule_library": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+      "reason_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+      "elapsed_seconds": 435.72869780892506,
+      "learn": {
+        "returncode": 0,
+        "elapsed_seconds": 374.1171267700847,
+        "stdout_tail": "{\n  \"method\": \"pure_popper\",\n  \"status\": \"failed\",\n  \"target\": \"isAllowedToUse/2\",\n  \"candidate_rules\": [],\n  \"rounds\": [\n    {\n      \"round\": 1,\n      \"selected_predicates\": [\n        \"package\",\n        \"class\",\n        \"method\",\n        \"containsPackage\",\n        \"containsClass\",\n        \"containsMethod\",\n        \"importsClass\",\n        \"extendsClass\",\n        \"implementsInterface\",\n        \"inheritsClass\",\n        \"callsMethod\",\n        \"methodName\",\n        \"methodArity\",\n        \"sameMethodName\",\n        \"sameMethodArity\"\n      ],\n      \"ranked_predicates\": [\n        \"package\",\n        \"class\",\n        \"method\",\n        \"containsPackage\",\n        \"containsClass\",\n        \"containsMethod\",\n        \"importsClass\",\n        \"extendsClass\",\n        \"implementsInterface\",\n        \"inheritsClass\",\n        \"callsMethod\",\n        \"methodName\",\n        \"methodArity\",\n        \"sameMethodName\",\n        \"sameMethodArity\"\n      ],\n      \"guidance_rationale\": \"Pure Popper baseline: full static bias, no LLM guidance.\",\n      \"candidate_rules\": [],\n      \"popper\": {\n        \"returncode\": 124,\n        \"elapsed_seconds\": 310.343589249067,\n        \"rules\": [],\n        \"error\": \"Popper timed out after 300s\",\n        \"stdout_tail\": \"\",\n        \"stderr_tail\": \"20:14:51 Searching programs of size: 3\\n20:14:51 ********************\\n20:14:51 New best hypothesis:\\n20:14:51 tp:6 fn:44 size:5\\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,A).\\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,C),containsPackage(C,A).\\n20:14:51 ********************\\n20:14:51 Searching programs of size: 4\\n20:14:52 ********************\\n20:14:52 New best hypothesis:\\n20:14:52 tp:44 fn:6 size:4\\n20:14:52 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\\n20:14:52 ********************\\n20:14:53 Searching programs of size: 5\\n20:14:55 ********************\\n20:14:55 New best hypothesis:\\n20:14:55 tp:45 fn:5 size:9\\n20:14:55 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\\n20:14:55 isAllowedToUse(A,B):- containsPackage(D,C),containsPackage(B,E),containsPackage(D,A),containsPackage(C,E).\\n20:14:55 ********************\"\n      },\n      \"best_rule\": null,\n      \"metrics\": null,\n      \"feedback\": \"no_rule\"\n    }\n  ],\n  \"popper_task\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/popper_task\",\n  \"popper\": {\n    \"returncode\": 124,\n    \"elapsed_seconds\": 310.343589249067,\n    \"rules\": [],\n    \"error\": \"Popper timed out after 300s\",\n    \"stdout_tail\": \"\",\n    \"stderr_tail\": \"20:14:51 Searching programs of size: 3\\n20:14:51 ********************\\n20:14:51 New best hypothesis:\\n20:14:51 tp:6 fn:44 size:5\\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,A).\\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,C),containsPackage(C,A).\\n20:14:51 ********************\\n20:14:51 Searching programs of size: 4\\n20:14:52 ********************\\n20:14:52 New best hypothesis:\\n20:14:52 tp:44 fn:6 size:4\\n20:14:52 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\\n20:14:52 ********************\\n20:14:53 Searching programs of size: 5\\n20:14:55 ********************\\n20:14:55 New best hypothesis:\\n20:14:55 tp:45 fn:5 size:9\\n20:14:55 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\\n20:14:55 isAllowedToUse(A,B):- containsPackage(D,C),containsPackage(B,E),containsPackage(D,A),containsPackage(C,E).\\n20:14:55 ********************\"\n  },\n  \"program_metrics\": null\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "baseline-popper",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/train_task",
+          "--output-dir",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5",
+          "--timeout",
+          "300",
+          "--min-f1",
+          "0.8",
+          "--json"
+        ]
+      },
+      "export": null,
+      "reason": {
+        "returncode": 0,
+        "elapsed_seconds": 61.608665184117854,
+        "stdout_tail": "springframework_web_util_UriComponents)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.035909220576286e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_handler,org_springframework_jca_support)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.4480194598436356e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_messaging,org_springframework_beans_factory_aot_BeanRegistrationsAotContribution)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 8.428003638982773e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_server,org_springframework_web_reactive_socket_server)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.153954356908798e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_sockjs_frame,org_springframework_cache_annotation)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.553026080131531e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_sockjs_frame,org_springframework_context_annotation)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.8640878200531e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_socket_sockjs_support,org_springframework_web_filter)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.61798582971096e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_testfixture_method,org_springframework_jmx_access)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 6.913905963301659e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_testfixture_xml,org_springframework_beans_testfixture_beans_factory_annotation)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.890164852142334e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_testfixture_xml,org_springframework_orm_jpa_hibernate)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 6.85080885887146e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_util_DefaultUriBuilderFactory,org_springframework_context_testfixture_context_aot_scan_reflective2_reflective22)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.661990821361542e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_util_DefaultUriBuilderFactory,org_springframework_web_testfixture_server_handler)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.562106475234032e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_util_HierarchicalUriComponents,org_springframework_contextsupport_testfixture_jcache)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.125083357095718e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_util_UriComponents,org_springframework_expression_spel_support)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.946044206619263e-06\n    },\n    {\n      \"query\": \"isAllowedToUse(org_springframework_web_util_pattern,org_springframework_r2dbc_connection_init)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.0249661803245544e-06\n    }\n  ]\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "reason-eval",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+          "--rule-library",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+          "--threshold",
+          "0.8",
+          "--max-depth",
+          "4",
+          "--max-proofs",
+          "3",
+          "--max-states",
+          "2000",
+          "--output",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+          "--json"
+        ]
+      },
+      "train_metrics": {},
+      "final_rule": null,
+      "popper": {
+        "returncode": 124,
+        "elapsed_seconds": 310.343589249067,
+        "rules": [],
+        "error": "Popper timed out after 300s",
+        "stdout_tail": "",
+        "stderr_tail": "20:14:51 Searching programs of size: 3\n20:14:51 ********************\n20:14:51 New best hypothesis:\n20:14:51 tp:6 fn:44 size:5\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,A).\n20:14:51 isAllowedToUse(A,B):- containsPackage(B,C),containsPackage(C,A).\n20:14:51 ********************\n20:14:51 Searching programs of size: 4\n20:14:52 ********************\n20:14:52 New best hypothesis:\n20:14:52 tp:44 fn:6 size:4\n20:14:52 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\n20:14:52 ********************\n20:14:53 Searching programs of size: 5\n20:14:55 ********************\n20:14:55 New best hypothesis:\n20:14:55 tp:45 fn:5 size:9\n20:14:55 isAllowedToUse(A,B):- importsClass(C,D),containsClass(B,D),containsClass(A,C).\n20:14:55 isAllowedToUse(A,B):- containsPackage(D,C),containsPackage(B,E),containsPackage(D,A),containsPackage(C,E).\n20:14:55 ********************"
+      },
+      "held_out": {
+        "examples": 450,
+        "positive_examples": 150,
+        "negative_examples": 300,
+        "supported_precision": 0.0,
+        "supported_recall": 0.0,
+        "negative_non_support_rate": 1.0,
+        "inconclusive_rate": 1.0,
+        "held_out_accuracy": 0.6666666666666666
+      }
+    },
+    {
+      "project": "spring",
+      "target": "overridesMethod",
+      "seed": 0,
+      "split_name": "spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5",
+      "split_dir": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5",
+      "status": "failed",
+      "learn_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5",
+      "rule_library": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+      "reason_output": "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+      "elapsed_seconds": 439.0599262798205,
+      "learn": {
+        "returncode": 0,
+        "elapsed_seconds": 374.9548552040942,
+        "stdout_tail": "ame\",\n        \"methodArity\",\n        \"sameMethodName\",\n        \"sameMethodArity\"\n      ],\n      \"ranked_predicates\": [\n        \"package\",\n        \"class\",\n        \"method\",\n        \"containsPackage\",\n        \"containsClass\",\n        \"containsMethod\",\n        \"importsClass\",\n        \"extendsClass\",\n        \"implementsInterface\",\n        \"inheritsClass\",\n        \"callsMethod\",\n        \"methodName\",\n        \"methodArity\",\n        \"sameMethodName\",\n        \"sameMethodArity\"\n      ],\n      \"guidance_rationale\": \"Pure Popper baseline: full static bias, no LLM guidance.\",\n      \"candidate_rules\": [],\n      \"popper\": {\n        \"returncode\": 124,\n        \"elapsed_seconds\": 310.3923824231606,\n        \"rules\": [],\n        \"error\": \"Popper timed out after 300s\",\n        \"stdout_tail\": \"\",\n        \"stderr_tail\": \"Warning:    Use :- discontiguous sameMethodName/2. to suppress this message\\nWarning: artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:1345652:\\nWarning:    Clauses of sameMethodArity/2 are not together in the source-file\\nWarning:    Earlier definition at artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:18\\nWarning:    Current predicate: sameMethodName/2\\nWarning:    Use :- discontiguous sameMethodArity/2. to suppress this message\\n20:22:10 Searching programs of size: 2\\n20:22:10 ********************\\n20:22:10 New best hypothesis:\\n20:22:10 tp:5 fn:45 size:2\\n20:22:10 overridesMethod(A,B):- callsMethod(A,B).\\n20:22:10 ********************\\n20:22:11 Searching programs of size: 3\\n20:22:12 ********************\\n20:22:12 New best hypothesis:\\n20:22:12 tp:6 fn:44 size:5\\n20:22:12 overridesMethod(A,B):- callsMethod(A,B).\\n20:22:12 overridesMethod(A,B):- callsMethod(C,A),callsMethod(C,B).\\n20:22:12 ********************\\n20:22:12 Searching programs of size: 4\"\n      },\n      \"best_rule\": null,\n      \"metrics\": null,\n      \"feedback\": \"no_rule\"\n    }\n  ],\n  \"popper_task\": \"artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task\",\n  \"popper\": {\n    \"returncode\": 124,\n    \"elapsed_seconds\": 310.3923824231606,\n    \"rules\": [],\n    \"error\": \"Popper timed out after 300s\",\n    \"stdout_tail\": \"\",\n    \"stderr_tail\": \"Warning:    Use :- discontiguous sameMethodName/2. to suppress this message\\nWarning: artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:1345652:\\nWarning:    Clauses of sameMethodArity/2 are not together in the source-file\\nWarning:    Earlier definition at artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:18\\nWarning:    Current predicate: sameMethodName/2\\nWarning:    Use :- discontiguous sameMethodArity/2. to suppress this message\\n20:22:10 Searching programs of size: 2\\n20:22:10 ********************\\n20:22:10 New best hypothesis:\\n20:22:10 tp:5 fn:45 size:2\\n20:22:10 overridesMethod(A,B):- callsMethod(A,B).\\n20:22:10 ********************\\n20:22:11 Searching programs of size: 3\\n20:22:12 ********************\\n20:22:12 New best hypothesis:\\n20:22:12 tp:6 fn:44 size:5\\n20:22:12 overridesMethod(A,B):- callsMethod(A,B).\\n20:22:12 overridesMethod(A,B):- callsMethod(C,A),callsMethod(C,B).\\n20:22:12 ********************\\n20:22:12 Searching programs of size: 4\"\n  },\n  \"program_metrics\": null\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "baseline-popper",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/train_task",
+          "--output-dir",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5",
+          "--timeout",
+          "300",
+          "--min-f1",
+          "0.8",
+          "--json"
+        ]
+      },
+      "export": null,
+      "reason": {
+        "returncode": 0,
+        "elapsed_seconds": 64.10331267281435,
+        "stdout_tail": "mework_context_event_MethodFailureEvent_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.841037586331367e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_testfixture_servlet_MockMultipartHttpServletRequest_addFile_MultipartFile,org_springframework_web_testfixture_servlet_MockHttpServletRequest_changeSessionId)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.716938853263855e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_ContentCachingResponseWrapper_containsHeader_String,org_springframework_http_HttpHeaders_containsHeader_String)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.420079782605171e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_DefaultUriBuilder_queryParam_String_Collection,org_springframework_web_reactive_function_server_ToStringVisitor_queryParam_String_String)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 8.555129170417786e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_DefaultUriBuilder_toUriString,org_springframework_web_util_UriBuilder_port_String)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.346039637923241e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_FullPathComponent_equals_Object,org_springframework_aop_support_annotation_AnnotationClassFilter_equals_Object)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.478054612874985e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_ServletRequestPath_equals_Object,org_springframework_beans_factory_support_BeanDefinitionResource_equals_Object)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.5087882578372955e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_ServletRequestPath_toString,org_springframework_core_convert_support_ConvertersForPair_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.584923878312111e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_StringPort_toString,org_springframework_cglib_core_MethodInfo_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.177935913205147e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_UriTemplate_toString,org_springframework_beans_factory_config_TypedStringValue_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.451046258211136e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_UriTemplate_toString,org_springframework_messaging_simp_stomp_StompBrokerRelayMessageHandler_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 1.1217081919312477e-05\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_pattern_RegexPathElement_toString,org_springframework_util_backoff_ExponentialBackOffExecution_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 7.453840225934982e-06\n    },\n    {\n      \"query\": \"overridesMethod(org_springframework_web_util_pattern_RegexPathElement_toString,org_springframework_web_socket_sockjs_client_SockJsUrlInfo_toString)\",\n      \"gold\": \"negative\",\n      \"decision\": \"INCONCLUSIVE\",\n      \"evidence_count\": 0,\n      \"runtime_seconds\": 6.781192496418953e-06\n    }\n  ]\n}\n",
+        "stderr_tail": "",
+        "timeout": false,
+        "command": [
+          "python",
+          "-m",
+          "para.cli",
+          "reason-eval",
+          "--task-dir",
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+          "--rule-library",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/rule_libraries/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_rule_library.json",
+          "--threshold",
+          "0.8",
+          "--max-depth",
+          "4",
+          "--max-proofs",
+          "3",
+          "--max-states",
+          "2000",
+          "--output",
+          "artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/reason_eval/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5_pure_popper_test_reason_eval.json",
+          "--json"
+        ]
+      },
+      "train_metrics": {},
+      "final_rule": null,
+      "popper": {
+        "returncode": 124,
+        "elapsed_seconds": 310.3923824231606,
+        "rules": [],
+        "error": "Popper timed out after 300s",
+        "stdout_tail": "",
+        "stderr_tail": "Warning:    Use :- discontiguous sameMethodName/2. to suppress this message\nWarning: artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:1345652:\nWarning:    Clauses of sameMethodArity/2 are not together in the source-file\nWarning:    Earlier definition at artifacts/icse_revision_20260621/e14_matched_popper_spring_seed0/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/popper_task/bk.pl:18\nWarning:    Current predicate: sameMethodName/2\nWarning:    Use :- discontiguous sameMethodArity/2. to suppress this message\n20:22:10 Searching programs of size: 2\n20:22:10 ********************\n20:22:10 New best hypothesis:\n20:22:10 tp:5 fn:45 size:2\n20:22:10 overridesMethod(A,B):- callsMethod(A,B).\n20:22:10 ********************\n20:22:11 Searching programs of size: 3\n20:22:12 ********************\n20:22:12 New best hypothesis:\n20:22:12 tp:6 fn:44 size:5\n20:22:12 overridesMethod(A,B):- callsMethod(A,B).\n20:22:12 overridesMethod(A,B):- callsMethod(C,A),callsMethod(C,B).\n20:22:12 ********************\n20:22:12 Searching programs of size: 4"
+      },
+      "held_out": {
+        "examples": 450,
+        "positive_examples": 150,
+        "negative_examples": 300,
+        "supported_precision": 0.0,
+        "supported_recall": 0.0,
+        "negative_non_support_rate": 1.0,
+        "inconclusive_rate": 1.0,
+        "held_out_accuracy": 0.6666666666666666
+      }
+    }
+  ],
+  "summary": {
+    "cases": 3,
+    "completed_reason_eval": 3,
+    "accepted_train_rules": 1,
+    "timed_out": 2,
+    "by_target": {
+      "canCallClass": {
+        "cases": 1,
+        "accepted_train_rules": 1,
+        "held_out_accuracy_mean": 1.0,
+        "supported_recall_mean": 1.0,
+        "negative_non_support_rate_mean": 1.0
+      },
+      "isAllowedToUse": {
+        "cases": 1,
+        "accepted_train_rules": 0,
+        "held_out_accuracy_mean": 0.6666666666666666,
+        "supported_recall_mean": 0.0,
+        "negative_non_support_rate_mean": 1.0
+      },
+      "overridesMethod": {
+        "cases": 1,
+        "accepted_train_rules": 0,
+        "held_out_accuracy_mean": 0.6666666666666666,
+        "supported_recall_mean": 0.0,
+        "negative_non_support_rate_mean": 1.0
+      }
+    }
+  }
+}

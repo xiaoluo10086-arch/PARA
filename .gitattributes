@@ -1,0 +1,6 @@
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.pl text eol=lf
+*.py text eol=lf
+*.csv text eol=lf

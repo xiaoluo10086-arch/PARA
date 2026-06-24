@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "library_kind": "para_reasoning_rule_library",
+  "min_f1": 0.8,
+  "factor_path_helpers": false,
+  "rule_count": 1,
+  "dependency_graph": {
+    "idb_predicates": [
+      "canCallClass/2"
+    ],
+    "edb_predicates": [
+      "callsMethod/2",
+      "containsMethod/2"
+    ],
+    "dependencies": {
+      "canCallClass/2": [
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "callsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "agent_role": {
+    "planner": "proposes executable path programs",
+    "refiner": "revises candidates from verifier feedback",
+    "symbolic_engine": "constructs bounded fact-grounded proofs"
+  },
+  "rules": [
+    {
+      "target": "canCallClass/2",
+      "target_types": [
+        "class",
+        "class"
+      ],
+      "rule": "canCallClass(A,B) :- containsMethod(A,M1),callsMethod(M1,M2),containsMethod(B,M2) [1.000].",
+      "path_programs": [
+        [
+          [
+            "containsMethod",
+            "fwd"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ]
+        ]
+      ],
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "threshold": 0.8,
+      "source_summary": "data/example/can_call_class/README.md",
+      "source_method": "frozen_public_example",
+      "status": "ok"
+    }
+  ]
+}

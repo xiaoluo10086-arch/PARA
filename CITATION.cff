@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use PARA, please cite the accompanying paper and this software."
+title: "PARA: Path Accountable Reasoning for Agentic Rule-Learning"
+type: software
+authors:
+  - name: "PARA Authors"
+repository-code: "https://github.com/xiaoluo10086-arch/PARA"
+license: MIT
+version: 0.1.0
+date-released: 2026-06-24

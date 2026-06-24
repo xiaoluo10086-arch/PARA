@@ -1,0 +1,166 @@
+{
+  "scope": "artifact-level audit of the final Qwen3.5-27B k=5 Spring protocol",
+  "limitations": [
+    "The final run did not persist complete Planner prompts, so prompt-text leakage is not claimed as directly audited.",
+    "Proof-structure statistics describe sampled agent-origin traces, not every held-out query."
+  ],
+  "checks": [
+    {
+      "scope": "canCallClass",
+      "check": "train_test_example_disjoint",
+      "passed": true,
+      "details": {
+        "train_examples": 150,
+        "test_examples": 450,
+        "overlap": 0
+      }
+    },
+    {
+      "scope": "canCallClass",
+      "check": "target_ground_facts_excluded_from_bk",
+      "passed": true,
+      "details": {
+        "target_ground_facts_in_train_or_test_bk": 0
+      }
+    },
+    {
+      "scope": "canCallClass",
+      "check": "strict_protocol_flags",
+      "passed": true,
+      "details": {
+        "--agent-paper-strict": true,
+        "--agent-indexed-plan-only": true,
+        "--agent-disable-symbolic-prior": true
+      }
+    },
+    {
+      "scope": "canCallClass",
+      "check": "run_local_rule_library",
+      "passed": true,
+      "details": {
+        "rule_count": 1,
+        "sources": [
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/summary.json"
+        ]
+      }
+    },
+    {
+      "scope": "isAllowedToUse",
+      "check": "train_test_example_disjoint",
+      "passed": true,
+      "details": {
+        "train_examples": 150,
+        "test_examples": 450,
+        "overlap": 0
+      }
+    },
+    {
+      "scope": "isAllowedToUse",
+      "check": "target_ground_facts_excluded_from_bk",
+      "passed": true,
+      "details": {
+        "target_ground_facts_in_train_or_test_bk": 0
+      }
+    },
+    {
+      "scope": "isAllowedToUse",
+      "check": "strict_protocol_flags",
+      "passed": true,
+      "details": {
+        "--agent-paper-strict": true,
+        "--agent-indexed-plan-only": true,
+        "--agent-disable-symbolic-prior": true
+      }
+    },
+    {
+      "scope": "isAllowedToUse",
+      "check": "run_local_rule_library",
+      "passed": true,
+      "details": {
+        "rule_count": 1,
+        "sources": [
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json"
+        ]
+      }
+    },
+    {
+      "scope": "overridesMethod",
+      "check": "train_test_example_disjoint",
+      "passed": true,
+      "details": {
+        "train_examples": 150,
+        "test_examples": 450,
+        "overlap": 0
+      }
+    },
+    {
+      "scope": "overridesMethod",
+      "check": "target_ground_facts_excluded_from_bk",
+      "passed": true,
+      "details": {
+        "target_ground_facts_in_train_or_test_bk": 0
+      }
+    },
+    {
+      "scope": "overridesMethod",
+      "check": "strict_protocol_flags",
+      "passed": true,
+      "details": {
+        "--agent-paper-strict": true,
+        "--agent-indexed-plan-only": true,
+        "--agent-disable-symbolic-prior": true
+      }
+    },
+    {
+      "scope": "overridesMethod",
+      "check": "run_local_rule_library",
+      "passed": true,
+      "details": {
+        "rule_count": 1,
+        "sources": [
+          "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/summary.json"
+        ]
+      }
+    },
+    {
+      "scope": "framework",
+      "check": "label_independent_reasoning_decision",
+      "passed": true,
+      "details": {
+        "source": "src/para/reasoner.py"
+      }
+    }
+  ],
+  "proof_structure": {
+    "sampled_queries": 30,
+    "proof_trees": 50,
+    "edb_fact_mentions": 190,
+    "idb_rule_applications": 50,
+    "maximum_observed_proof_depth": 1,
+    "proof_trees_with_multiple_idb_applications": 0,
+    "recursive_idb_applications": 0,
+    "empirical_scope": "single accepted IDB rule applied to multi-hop EDB evidence; the engine supports bounded IDB composition, but recursive composition is not exercised by this sample",
+    "by_target": {
+      "canCallClass": {
+        "queries": 10,
+        "proof_trees": 19,
+        "edb_leaves": 57,
+        "idb_applications": 19
+      },
+      "isAllowedToUse": {
+        "queries": 10,
+        "proof_trees": 21,
+        "edb_leaves": 63,
+        "idb_applications": 21
+      },
+      "overridesMethod": {
+        "queries": 10,
+        "proof_trees": 10,
+        "edb_leaves": 70,
+        "idb_applications": 10
+      }
+    }
+  },
+  "passed": true,
+  "violations": 0
+}

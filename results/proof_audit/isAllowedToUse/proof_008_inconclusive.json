@@ -1,0 +1,57 @@
+{
+  "query": "isAllowedToUse(org_springframework_util_xml,org_springframework_cglib_core_internal)",
+  "decision": "INCONCLUSIVE",
+  "reason": "no bounded proof produced sufficient evidence",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.0005487080197781324,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.000534858088940382,
+    "evidence_materialization_seconds": 1.3849930837750435e-05
+  },
+  "search_stats": {
+    "goal_calls": 36,
+    "edb_candidate_count": 44,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 0,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 0,
+    "termination_reason": "exhausted_no_proof"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "isAllowedToUse/2"
+    ],
+    "edb_predicates": [
+      "containsClass/2",
+      "importsClass/2"
+    ],
+    "dependencies": {
+      "isAllowedToUse/2": [
+        {
+          "predicate": "containsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "importsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsClass/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 0,
+  "evidence": []
+}

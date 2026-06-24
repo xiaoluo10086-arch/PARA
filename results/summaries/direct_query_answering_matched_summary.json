@@ -1,0 +1,88 @@
+{
+  "protocol": "direct_llm_query_answering",
+  "comparison_boundary": "Direct QA does not see held-out labels. PARA's evaluation harness uses explicit negative labels only to distinguish UNSUPPORTED from INCONCLUSIVE after proof search. Therefore supported precision/recall are the primary matched metrics; three-valued accuracy remains diagnostic.",
+  "models": {
+    "qwen27b": {
+      "sources": [
+        "artifacts/icse_revision_20260621/direct_query_answering_matched/qwen27b_full_canCallClass",
+        "artifacts/icse_revision_20260621/direct_query_answering_matched/qwen27b_full_isAllowedToUse",
+        "artifacts/icse_revision_20260621/direct_query_answering_matched/qwen27b_full_overridesMethod"
+      ],
+      "queries": 1350,
+      "by_target": {
+        "canCallClass": {
+          "queries": 450,
+          "supported_precision": 1.0,
+          "supported_recall": 0.72,
+          "unsupported_recall": 0.0,
+          "inconclusive_rate": 0.7555555555555555,
+          "diagnostic_three_value_accuracy": 0.24,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 0
+        },
+        "isAllowedToUse": {
+          "queries": 450,
+          "supported_precision": 0.9236641221374046,
+          "supported_recall": 0.8066666666666666,
+          "unsupported_recall": 0.0,
+          "inconclusive_rate": 0.7044444444444444,
+          "diagnostic_three_value_accuracy": 0.2688888888888889,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 7
+        },
+        "overridesMethod": {
+          "queries": 450,
+          "supported_precision": 1.0,
+          "supported_recall": 0.006666666666666667,
+          "unsupported_recall": 0.18,
+          "inconclusive_rate": 0.8777777777777778,
+          "diagnostic_three_value_accuracy": 0.12222222222222222,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 0
+        }
+      },
+      "transport_or_parse_failures": 0,
+      "invalid_evidence_citations": 0
+    },
+    "deepseek_v4_pro": {
+      "sources": [
+        "artifacts/icse_revision_20260621/direct_query_answering_matched/deepseek_v4_pro_full"
+      ],
+      "queries": 1350,
+      "by_target": {
+        "canCallClass": {
+          "queries": 450,
+          "supported_precision": 1.0,
+          "supported_recall": 0.82,
+          "unsupported_recall": 0.0,
+          "inconclusive_rate": 0.7266666666666667,
+          "diagnostic_three_value_accuracy": 0.2733333333333333,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 0
+        },
+        "isAllowedToUse": {
+          "queries": 450,
+          "supported_precision": 0.8161764705882353,
+          "supported_recall": 0.74,
+          "unsupported_recall": 0.0,
+          "inconclusive_rate": 0.6977777777777778,
+          "diagnostic_three_value_accuracy": 0.24666666666666667,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 7
+        },
+        "overridesMethod": {
+          "queries": 450,
+          "supported_precision": 0.5,
+          "supported_recall": 0.006666666666666667,
+          "unsupported_recall": 0.26,
+          "inconclusive_rate": 0.82,
+          "diagnostic_three_value_accuracy": 0.17555555555555555,
+          "invalid": 0,
+          "positive_queries_with_no_retrieved_path": 0
+        }
+      },
+      "transport_or_parse_failures": 0,
+      "invalid_evidence_citations": 0
+    }
+  }
+}

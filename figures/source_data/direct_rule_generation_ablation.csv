@@ -1,0 +1,13 @@
+model,target,direct_rule_recall,para_recall
+Qwen3.5-27B,canCallClass,0.687,1.000
+Qwen3.5-27B,isAllowedToUse,0.820,0.820
+Qwen3.5-27B,overridesMethod,0.000,1.000
+GPT-4o,canCallClass,1.000,1.000
+GPT-4o,isAllowedToUse,0.820,0.820
+GPT-4o,overridesMethod,0.220,1.000
+DeepSeek Chat,canCallClass,1.000,1.000
+DeepSeek Chat,isAllowedToUse,0.000,0.820
+DeepSeek Chat,overridesMethod,0.220,1.000
+Gemini 2.5 Pro,canCallClass,1.000,1.000
+Gemini 2.5 Pro,isAllowedToUse,0.820,0.820
+Gemini 2.5 Pro,overridesMethod,0.913,1.000

@@ -1,0 +1,490 @@
+{
+  "query": "isAllowedToUse(org_springframework_web_method_annotation,org_springframework_context)",
+  "decision": "SUPPORTED",
+  "reason": "at least one bounded proof tree supports the query",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.006655434146523476,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.006515491055324674,
+    "evidence_materialization_seconds": 0.000139943091198802
+  },
+  "search_stats": {
+    "goal_calls": 395,
+    "edb_candidate_count": 754,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 0,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 4,
+    "termination_reason": "proof_found"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "isAllowedToUse/2"
+    ],
+    "edb_predicates": [
+      "containsClass/2",
+      "importsClass/2"
+    ],
+    "dependencies": {
+      "isAllowedToUse/2": [
+        {
+          "predicate": "containsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "importsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsClass/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 4,
+  "evidence": [
+    {
+      "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+      "rule_f1": 0.9361702127659575,
+      "rule_precision": 1.0,
+      "rule_recall": 0.88,
+      "body_facts": [
+        "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+        "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSource)",
+        "containsClass(org_springframework_context,org_springframework_context_MessageSource)"
+      ],
+      "path_programs": [
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsPackage",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "implementsInterface",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 0.9361702127659575,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "isAllowedToUse(org_springframework_web_method_annotation,org_springframework_context)",
+        "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+        "rule_f1": 0.9361702127659575,
+        "score": 0.9361702127659575,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+            "fact": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSource)",
+            "fact": "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSource)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_context,org_springframework_context_MessageSource)",
+            "fact": "containsClass(org_springframework_context,org_springframework_context_MessageSource)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+      "rule_f1": 0.9361702127659575,
+      "rule_precision": 1.0,
+      "rule_recall": 0.88,
+      "body_facts": [
+        "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+        "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSourceResolvable)",
+        "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)"
+      ],
+      "path_programs": [
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsPackage",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "implementsInterface",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 0.9361702127659575,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "isAllowedToUse(org_springframework_web_method_annotation,org_springframework_context)",
+        "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+        "rule_f1": 0.9361702127659575,
+        "score": 0.9361702127659575,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+            "fact": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_HandlerMethodValidationException)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSourceResolvable)",
+            "fact": "importsClass(org_springframework_web_method_annotation_HandlerMethodValidationException,org_springframework_context_MessageSourceResolvable)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)",
+            "fact": "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+      "rule_f1": 0.9361702127659575,
+      "rule_precision": 1.0,
+      "rule_recall": 0.88,
+      "body_facts": [
+        "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+        "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSource)",
+        "containsClass(org_springframework_context,org_springframework_context_MessageSource)"
+      ],
+      "path_programs": [
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsPackage",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "implementsInterface",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 0.9361702127659575,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "isAllowedToUse(org_springframework_web_method_annotation,org_springframework_context)",
+        "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+        "rule_f1": 0.9361702127659575,
+        "score": 0.9361702127659575,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+            "fact": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSource)",
+            "fact": "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSource)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_context,org_springframework_context_MessageSource)",
+            "fact": "containsClass(org_springframework_context,org_springframework_context_MessageSource)",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+      "rule_f1": 0.9361702127659575,
+      "rule_precision": 1.0,
+      "rule_recall": 0.88,
+      "body_facts": [
+        "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+        "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSourceResolvable)",
+        "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)"
+      ],
+      "path_programs": [
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "importsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsPackage",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "extendsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ],
+        [
+          [
+            "containsClass",
+            "fwd"
+          ],
+          [
+            "implementsInterface",
+            "fwd"
+          ],
+          [
+            "containsClass",
+            "rev"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 0.9361702127659575,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "isAllowedToUse(org_springframework_web_method_annotation,org_springframework_context)",
+        "rule": "isAllowedToUse(A,B) :- containsClass(A,V1),importsClass(V1,V2),containsClass(B,V2) [0.924].",
+        "rule_f1": 0.9361702127659575,
+        "score": 0.9361702127659575,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+            "fact": "containsClass(org_springframework_web_method_annotation,org_springframework_web_method_annotation_Visitor)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSourceResolvable)",
+            "fact": "importsClass(org_springframework_web_method_annotation_Visitor,org_springframework_context_MessageSourceResolvable)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)",
+            "fact": "containsClass(org_springframework_context,org_springframework_context_MessageSourceResolvable)",
+            "score": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

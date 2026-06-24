@@ -1,0 +1,48 @@
+{
+  "definition": "A held-out explicit negative is a near miss when its first argument occurs as the first argument of a held-out positive, or its second argument occurs as the second argument of a held-out positive.",
+  "unique_negative_queries": 105,
+  "model_decisions": 105,
+  "decision_counts": {
+    "UNSUPPORTED": 105
+  },
+  "false_supported": 0,
+  "selection_sha256": "2676bb1108869dce583962e0a2ddcc7eafe6b34cc5151f9e9b0d4ca96574b374",
+  "cases": [
+    {
+      "manifest": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/manifests/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5_manifest.json",
+      "split_name": "spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5",
+      "test_task": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_canCallClass_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+      "near_miss_definition": "negative shares its first or second argument position with a held-out positive",
+      "near_miss_negatives": 11,
+      "decisions": {
+        "UNSUPPORTED": 11
+      },
+      "missing_reason_rows": 0,
+      "selection_sha256": "88f6fc3c0798486c2cde595af66d0801ced2223853a9997b9c9fde62b4e5b093"
+    },
+    {
+      "manifest": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/manifests/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_manifest.json",
+      "split_name": "spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5",
+      "test_task": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+      "near_miss_definition": "negative shares its first or second argument position with a held-out positive",
+      "near_miss_negatives": 92,
+      "decisions": {
+        "UNSUPPORTED": 92
+      },
+      "missing_reason_rows": 0,
+      "selection_sha256": "f2dd18fdb967e93992fccad2d755109d4a349fee7028d3bbea3515e5c041856c"
+    },
+    {
+      "manifest": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/manifests/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5_manifest.json",
+      "split_name": "spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5",
+      "test_task": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+      "near_miss_definition": "negative shares its first or second argument position with a held-out positive",
+      "near_miss_negatives": 2,
+      "decisions": {
+        "UNSUPPORTED": 2
+      },
+      "missing_reason_rows": 0,
+      "selection_sha256": "9a877d2d49c78ac4d55c31ed37e730d795f58eeb404ef91f1fb73c110ef384ff"
+    }
+  ]
+}

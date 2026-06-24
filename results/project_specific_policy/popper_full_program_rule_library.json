@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "library_kind": "para_reasoning_rule_library",
+  "min_f1": 0.8,
+  "factor_path_helpers": false,
+  "rule_count": 6,
+  "dependency_graph": {
+    "idb_predicates": [
+      "springSameModuleUse/2"
+    ],
+    "edb_predicates": [
+      "containsPackage/2",
+      "containsClass/2",
+      "implementsInterface/2",
+      "extendsClass/2",
+      "importsClass/2",
+      "inheritsClass/2"
+    ],
+    "dependencies": {
+      "springSameModuleUse/2": [
+        {
+          "predicate": "containsPackage/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "implementsInterface/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "extendsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "importsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "inheritsClass/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "agent_role": {
+    "planner": "not used; rules are the full Popper stdout program",
+    "refiner": "not used",
+    "symbolic_engine": "executes bounded backward chaining and validates proof steps"
+  },
+  "rules": [
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- containsPackage(B,A) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    },
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- containsClass(A,D),implementsInterface(C,E),extendsClass(D,E),containsClass(B,C) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    },
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- containsClass(A,C),implementsInterface(C,E),importsClass(E,D),containsClass(B,D) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    },
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- containsClass(B,D),inheritsClass(E,C),containsClass(A,C),inheritsClass(E,D) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    },
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- importsClass(C,D),containsPackage(A,B),containsClass(A,C),containsClass(B,D) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    },
+    {
+      "target": "springSameModuleUse/2",
+      "target_types": [],
+      "rule": "springSameModuleUse(A,B) :- containsClass(B,D),importsClass(E,D),containsPackage(C,A),containsClass(C,E) [0.810].",
+      "path_programs": [],
+      "f1": 0.8095238095238095,
+      "precision": 1.0,
+      "recall": 0.68,
+      "threshold": 0.8,
+      "source_summary": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/pure_popper_clingo/learn/summary.json",
+      "source_method": "pure_popper_full_program_stdout",
+      "status": "ok"
+    }
+  ]
+}

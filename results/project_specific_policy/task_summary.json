@@ -1,0 +1,138 @@
+{
+  "target": "springSameModuleUse",
+  "source_task": "external-data/spring/spring_nshrl_isAllowedToUse",
+  "task_dir": "artifacts/icse_revision_20260623/project_specific_spring_policy_v2/task_spring_same_module_use",
+  "definition": "PkgA imports PkgB through class-level imports and both packages share the same Spring top-level module.",
+  "project_specific_facts": "springModuleName(Package, Module) derived from Spring package naming.",
+  "positive_examples": 1226,
+  "negative_examples": 23145,
+  "negative_import_cross_module": 2175,
+  "negative_same_module_no_import": 20970,
+  "package_import_edges": 3401,
+  "packages_with_module_names": 487,
+  "modules": [
+    "aop",
+    "aot",
+    "asm",
+    "beans",
+    "cache",
+    "cglib",
+    "context",
+    "contextsupport",
+    "core",
+    "dao",
+    "ejb",
+    "expression",
+    "format",
+    "http",
+    "instrument",
+    "javapoet",
+    "jca",
+    "jdbc",
+    "jms",
+    "jmx",
+    "jndi",
+    "lang",
+    "mail",
+    "messaging",
+    "mock",
+    "objenesis",
+    "orm",
+    "oxm",
+    "protobuf",
+    "r2dbc",
+    "resilience",
+    "scheduling",
+    "scripting",
+    "stereotype",
+    "transaction",
+    "ui",
+    "util",
+    "validation",
+    "web"
+  ],
+  "example_positives": [
+    [
+      "org_springframework_aop_aspectj",
+      "org_springframework_aop"
+    ],
+    [
+      "org_springframework_aop_aspectj",
+      "org_springframework_aop_framework"
+    ],
+    [
+      "org_springframework_aop_aspectj",
+      "org_springframework_aop_framework_autoproxy"
+    ],
+    [
+      "org_springframework_aop_aspectj",
+      "org_springframework_aop_interceptor"
+    ],
+    [
+      "org_springframework_aop_aspectj",
+      "org_springframework_aop_support"
+    ],
+    [
+      "org_springframework_aop_aspectj_annotation",
+      "org_springframework_aop"
+    ],
+    [
+      "org_springframework_aop_aspectj_annotation",
+      "org_springframework_aop_aspectj"
+    ],
+    [
+      "org_springframework_aop_aspectj_annotation",
+      "org_springframework_aop_aspectj_annotation_AbstractAspectJAdvisorFactory"
+    ],
+    [
+      "org_springframework_aop_aspectj_annotation",
+      "org_springframework_aop_aspectj_autoproxy"
+    ],
+    [
+      "org_springframework_aop_aspectj_annotation",
+      "org_springframework_aop_framework"
+    ]
+  ],
+  "example_negatives": [
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_aspectj"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_aspectj_annotation"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_aspectj_annotation_AbstractAspectJAdvisorFactory"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_aspectj_autoproxy"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_config"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_framework"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_framework_adapter"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_framework_autoproxy"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_interceptor"
+    ],
+    [
+      "org_springframework_aop",
+      "org_springframework_aop_scope"
+    ]
+  ]
+}

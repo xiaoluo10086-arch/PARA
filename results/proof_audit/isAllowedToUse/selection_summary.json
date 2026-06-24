@@ -1,0 +1,29 @@
+{
+  "task_dir": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/splits/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5/test_task",
+  "rule_library": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/rule_libraries/spring_isAllowedToUse_train50_100_seed0_agent_strict_qwen27b_k5_rule_library.json",
+  "seed": 0,
+  "predeclared_quota": {
+    "SUPPORTED": 5,
+    "INCONCLUSIVE": 5
+  },
+  "achieved_distribution": {
+    "SUPPORTED": 5,
+    "INCONCLUSIVE": 5
+  },
+  "examples_scanned": 74,
+  "sample_size": 10,
+  "audit_returncode": 0,
+  "audit_output": "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_trace_audit.json",
+  "files": [
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_000_supported.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_001_supported.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_002_supported.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_003_supported.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_004_supported.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_005_inconclusive.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_006_inconclusive.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_007_inconclusive.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_008_inconclusive.json",
+    "artifacts/icse_revision_20260620/e4_agent_proof_audit/isAllowedToUse/proof_009_inconclusive.json"
+  ]
+}

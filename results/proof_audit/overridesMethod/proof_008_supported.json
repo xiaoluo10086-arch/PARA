@@ -1,0 +1,208 @@
+{
+  "query": "overridesMethod(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,org_springframework_cache_CacheManager_getCache_String)",
+  "decision": "SUPPORTED",
+  "reason": "at least one bounded proof tree supports the query",
+  "explicit_example_label": true,
+  "threshold": 0.8,
+  "applicable_rule_count": 1,
+  "reasoning_mode": "bounded_backward_chaining",
+  "max_depth": 4,
+  "max_proofs": 5,
+  "runtime_seconds": 0.00020360015332698822,
+  "runtime_breakdown": {
+    "engine_build_seconds": 0.0,
+    "proof_search_seconds": 0.00017438712529838085,
+    "evidence_materialization_seconds": 2.921302802860737e-05
+  },
+  "search_stats": {
+    "goal_calls": 9,
+    "edb_candidate_count": 9,
+    "depth_limit_hits": 0,
+    "cycle_prunes": 0,
+    "state_limit_hits": 0,
+    "proof_limit_hits": 0,
+    "max_depth_observed": 1,
+    "normal_completion": true,
+    "proofs_found": 1,
+    "termination_reason": "proof_found"
+  },
+  "dependency_graph": {
+    "idb_predicates": [
+      "overridesMethod/2"
+    ],
+    "edb_predicates": [
+      "containsMethod/2",
+      "inheritsClass/2",
+      "methodArity/2",
+      "methodName/2"
+    ],
+    "dependencies": {
+      "overridesMethod/2": [
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "inheritsClass/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "containsMethod/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "methodArity/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "methodArity/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "methodName/2",
+          "kind": "EDB"
+        },
+        {
+          "predicate": "methodName/2",
+          "kind": "EDB"
+        }
+      ]
+    },
+    "recursive_predicates": []
+  },
+  "evidence_count": 1,
+  "evidence": [
+    {
+      "rule": "overridesMethod(A,B) :- containsMethod(V1,A),inheritsClass(V1,V2),containsMethod(V2,B),methodArity(A,C1),methodArity(B,C1),methodName(A,C2),methodName(B,C2) [0.980].",
+      "rule_f1": 1.0,
+      "rule_precision": 1.0,
+      "rule_recall": 1.0,
+      "body_facts": [
+        "containsMethod(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String)",
+        "inheritsClass(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_CacheManager)",
+        "containsMethod(org_springframework_cache_CacheManager,org_springframework_cache_CacheManager_getCache_String)"
+      ],
+      "path_programs": [
+        [
+          [
+            "containsMethod",
+            "rev"
+          ],
+          [
+            "inheritsClass",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "rev"
+          ],
+          [
+            "implementsInterface",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "callsMethod",
+            "rev"
+          ],
+          [
+            "callsMethod",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "containsMethod",
+            "rev"
+          ],
+          [
+            "containsMethod",
+            "fwd"
+          ]
+        ],
+        [
+          [
+            "callsMethod",
+            "fwd"
+          ],
+          [
+            "containsMethod",
+            "rev"
+          ],
+          [
+            "containsMethod",
+            "fwd"
+          ]
+        ]
+      ],
+      "path_evidence": [],
+      "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+      "proof_score": 1.0,
+      "proof_trace": {
+        "kind": "derived_rule",
+        "goal": "overridesMethod(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,org_springframework_cache_CacheManager_getCache_String)",
+        "rule": "overridesMethod(A,B) :- containsMethod(V1,A),inheritsClass(V1,V2),containsMethod(V2,B),methodArity(A,C1),methodArity(B,C1),methodName(A,C2),methodName(B,C2) [0.980].",
+        "rule_f1": 1.0,
+        "score": 1.0,
+        "confidence_aggregation": "min",
+        "depth": 0,
+        "source_summary": "artifacts/icse_revision_20260620/e2_portfolio_k/k5/learn/spring_overridesMethod_train50_100_seed0_agent_strict_qwen27b_k5/summary.json",
+        "subproofs": [
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String)",
+            "fact": "containsMethod(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "inheritsClass(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_CacheManager)",
+            "fact": "inheritsClass(org_springframework_cache_concurrent_ConcurrentMapCacheManager,org_springframework_cache_CacheManager)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "containsMethod(org_springframework_cache_CacheManager,org_springframework_cache_CacheManager_getCache_String)",
+            "fact": "containsMethod(org_springframework_cache_CacheManager,org_springframework_cache_CacheManager_getCache_String)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "methodArity(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,arity_1)",
+            "fact": "methodArity(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,arity_1)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "methodArity(org_springframework_cache_CacheManager_getCache_String,arity_1)",
+            "fact": "methodArity(org_springframework_cache_CacheManager_getCache_String,arity_1)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "methodName(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,name_getCache)",
+            "fact": "methodName(org_springframework_cache_concurrent_ConcurrentMapCacheManager_getCache_String,name_getCache)",
+            "score": 1.0
+          },
+          {
+            "kind": "edb_fact",
+            "goal": "methodName(org_springframework_cache_CacheManager_getCache_String,name_getCache)",
+            "fact": "methodName(org_springframework_cache_CacheManager_getCache_String,name_getCache)",
+            "score": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

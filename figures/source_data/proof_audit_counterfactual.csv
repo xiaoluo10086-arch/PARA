@@ -1,0 +1,4 @@
+target,proof_sampled_queries,proof_trees,edb_fact_mentions,audit_errors,audit_warnings,counterfactual_queries,initially_supported,critical_fact_rate,alternative_fact_rate,all_selected_alternative_rate
+canCallClass,10,19,57,0,0,20,20,0.667,0.333,0.200
+isAllowedToUse,10,21,63,0,0,20,16,0.167,0.833,0.625
+overridesMethod,10,10,70,0,0,20,20,1.000,0.000,0.000

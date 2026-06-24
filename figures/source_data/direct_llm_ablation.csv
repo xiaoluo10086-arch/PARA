@@ -1,0 +1,25 @@
+model,target,method,train_f1,heldout_accuracy,supported_precision,supported_recall,inconclusive_rate,exported_rules
+Qwen3.5-27B,canCallClass,Direct LLM,0.810,0.896,1.000,0.687,0.104,1
+Qwen3.5-27B,isAllowedToUse,Direct LLM,0.936,0.940,1.000,0.820,0.060,1
+Qwen3.5-27B,overridesMethod,Direct LLM,0.000,0.667,0.000,0.000,0.333,0
+GPT-4o,canCallClass,Direct LLM,1.000,1.000,1.000,1.000,0.000,1
+GPT-4o,isAllowedToUse,Direct LLM,0.936,0.940,1.000,0.820,0.060,1
+GPT-4o,overridesMethod,Direct LLM,0.980,0.740,1.000,0.220,0.260,1
+DeepSeek Chat,canCallClass,Direct LLM,1.000,1.000,1.000,1.000,0.000,1
+DeepSeek Chat,isAllowedToUse,Direct LLM,0.000,0.667,0.000,0.000,0.333,0
+DeepSeek Chat,overridesMethod,Direct LLM,0.980,0.740,1.000,0.220,0.260,1
+Gemini 2.5 Pro,canCallClass,Direct LLM,1.000,1.000,1.000,1.000,0.000,1
+Gemini 2.5 Pro,isAllowedToUse,Direct LLM,0.936,0.940,1.000,0.820,0.060,1
+Gemini 2.5 Pro,overridesMethod,Direct LLM,0.980,0.971,1.000,0.913,0.029,1
+Qwen3.5-27B,canCallClass,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+Qwen3.5-27B,isAllowedToUse,Strict PARA path-program,0.936,0.940,1.000,0.820,0.060,1
+Qwen3.5-27B,overridesMethod,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+GPT-4o,canCallClass,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+GPT-4o,isAllowedToUse,Strict PARA path-program,0.936,0.940,1.000,0.820,0.060,1
+GPT-4o,overridesMethod,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+DeepSeek Chat,canCallClass,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+DeepSeek Chat,isAllowedToUse,Strict PARA path-program,0.936,0.940,1.000,0.820,0.060,1
+DeepSeek Chat,overridesMethod,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+Gemini 2.5 Pro,canCallClass,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
+Gemini 2.5 Pro,isAllowedToUse,Strict PARA path-program,0.936,0.940,1.000,0.820,0.060,1
+Gemini 2.5 Pro,overridesMethod,Strict PARA path-program,1.000,1.000,1.000,1.000,0.000,1
