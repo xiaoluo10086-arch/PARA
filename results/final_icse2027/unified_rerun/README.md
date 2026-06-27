@@ -4,9 +4,9 @@ This directory contains paper-facing tables built from the 2026-06-27 rerun.
 
 ## Inputs
 
-- Fresh learn/admission rerun: `Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/final_suite_20260627_unified_p0a_learn_only/tables/unified_p0a_learn_only_summary.csv`
-- Verified held-out Spring suite: `Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/final_paper_verified_suite_20260627/tables/table1_effectiveness_rows.csv`
-- Verified high-complexity suite: `Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/final_paper_verified_suite_20260627/tables/table2_high_complexity_rows.csv`
+- Fresh learn/admission rerun: `artifacts/paper_final_icse2027/results/final_suite_20260627_unified_p0a_learn_only/tables/unified_p0a_learn_only_summary.csv`
+- Verified held-out Spring suite: `artifacts/proof_strategy_agent/results/final_paper_verified_suite_20260627/tables/table1_effectiveness_rows.csv`
+- Verified high-complexity suite: `artifacts/proof_strategy_agent/results/final_paper_verified_suite_20260627/tables/table2_high_complexity_rows.csv`
 
 ## Outputs
 

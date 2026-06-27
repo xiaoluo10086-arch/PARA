@@ -41,7 +41,7 @@ from .reasoner import (
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="PARA: Path Accountable Reasoning for Agentic Rule-Learning")
+    parser = argparse.ArgumentParser(description="PARA: Path-accountable proof trees for software architecture relation reasoning")
     sub = parser.add_subparsers(dest="command", required=True)
 
     # inspect 用于快速确认一个 Popper 任务目录是否完整，

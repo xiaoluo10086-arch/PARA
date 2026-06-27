@@ -4,7 +4,7 @@
     {
       "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
       "contract_index": 0,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_000.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_000.json",
       "query": "signatureSafeOverride(org_springframework_web_reactive_result_view_AbstractUrlBasedView_toString,org_springframework_web_reactive_result_view_AbstractView_toString)",
       "gold_label": "positive",
       "status": "SUPPORTED",
@@ -18,7 +18,7 @@
     {
       "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
       "contract_index": 1,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_001.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_001.json",
       "query": "signatureSafeOverride(org_springframework_beans_PropertyValue_setConvertedValue_Object,org_springframework_beans_BeanMetadataAttributeAccessor_setAttribute_String_Object)",
       "gold_label": "negative",
       "status": "INCONCLUSIVE",

@@ -4,7 +4,7 @@
     {
       "split_name": "hc_interfaceOverride_seed0_proof_strategy",
       "contract_index": 0,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_interfaceOverride_seed0_proof_strategy/proof_contract_000.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_interfaceOverride_seed0_proof_strategy/proof_contract_000.json",
       "query": "interfaceOverride(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)",
       "gold_label": "positive",
       "status": "SUPPORTED",
@@ -18,7 +18,7 @@
     {
       "split_name": "hc_interfaceOverride_seed0_proof_strategy",
       "contract_index": 1,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_interfaceOverride_seed0_proof_strategy/proof_contract_001.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_interfaceOverride_seed0_proof_strategy/proof_contract_001.json",
       "query": "interfaceOverride(org_springframework_beans_factory_support_AbstractBeanDefinition_getInstanceSupplier,org_springframework_beans_factory_config_BeanDefinition_setDescription_String)",
       "gold_label": "negative",
       "status": "INCONCLUSIVE",

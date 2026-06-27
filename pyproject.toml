@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "para-reasoning"
 version = "0.1.0"
-description = "Path Accountable Reasoning for Agentic Rule-Learning"
+description = "Path-accountable proof trees for software architecture relation reasoning"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

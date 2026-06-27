@@ -13,7 +13,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "62.018",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -30,7 +30,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "66.499",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -47,7 +47,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "132.562",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -64,7 +64,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "63.679",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -81,7 +81,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "58.839",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_heuristic_manifest.json",
       "admitted": "0",
       "valid_cell": "1"
     },
@@ -98,7 +98,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "86.826",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_graphrag_manifest.json",
       "admitted": "0",
       "valid_cell": "1"
     },
@@ -115,7 +115,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "61.957",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -132,7 +132,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "67.556",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -149,7 +149,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "214.858",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -166,7 +166,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "64.311",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -183,7 +183,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "66.352",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -200,7 +200,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "130.338",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_signatureSafeOverride_seed1_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -217,7 +217,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "64.241",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -234,7 +234,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "58.991",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_heuristic_manifest.json",
       "admitted": "0",
       "valid_cell": "1"
     },
@@ -251,7 +251,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "87.383",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_packageCallDependency_seed1_graphrag_manifest.json",
       "admitted": "0",
       "valid_cell": "1"
     },
@@ -268,7 +268,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "63.205",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -285,7 +285,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "67.523",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -302,7 +302,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "143.236",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed1/manifests/hc_interfaceOverride_seed1_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -319,7 +319,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "64.079",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -336,7 +336,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "66.561",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -353,7 +353,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "104.645",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_signatureSafeOverride_seed2_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -370,7 +370,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "64.189",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -387,7 +387,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "59.061",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_heuristic_manifest.json",
       "admitted": "0",
       "valid_cell": "1"
     },
@@ -404,7 +404,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "441.948",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_packageCallDependency_seed2_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -421,7 +421,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "61.834",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_proof_strategy_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_proof_strategy_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -438,7 +438,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "71.094",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_heuristic_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_heuristic_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     },
@@ -455,7 +455,7 @@
       "supported_recall": "",
       "mean_runtime_seconds": "",
       "elapsed_seconds": "629.448",
-      "manifest": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_graphrag_manifest.json",
+      "manifest": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed2/manifests/hc_interfaceOverride_seed2_graphrag_manifest.json",
       "admitted": "1",
       "valid_cell": "1"
     }

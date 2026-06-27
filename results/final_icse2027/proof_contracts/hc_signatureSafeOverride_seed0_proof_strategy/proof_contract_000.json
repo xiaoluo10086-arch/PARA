@@ -2,9 +2,9 @@
   "schema_version": 1,
   "contract_kind": "para_proof_contract",
   "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
-  "manifest": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_proof_strategy_manifest.json",
-  "task_dir": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/splits/hc_signatureSafeOverride_seed0_proof_strategy/test_task",
-  "rule_library": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/rule_libraries/hc_signatureSafeOverride_seed0_proof_strategy_rule_library.json",
+  "manifest": "artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/manifests/hc_signatureSafeOverride_seed0_proof_strategy_manifest.json",
+  "task_dir": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/splits/hc_signatureSafeOverride_seed0_proof_strategy/test_task",
+  "rule_library": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/rule_libraries/hc_signatureSafeOverride_seed0_proof_strategy_rule_library.json",
   "query": "signatureSafeOverride(org_springframework_web_reactive_result_view_AbstractUrlBasedView_toString,org_springframework_web_reactive_result_view_AbstractView_toString)",
   "explicit_gold_label": "positive",
   "status": "SUPPORTED",
@@ -25,7 +25,7 @@
       "score": 1.0,
       "confidence_aggregation": "min",
       "depth": 0,
-      "source_summary": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/learn/hc_signatureSafeOverride_seed0_proof_strategy/summary.json",
+      "source_summary": "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent/results/high_complexity_hard2_three_targets_seed0/learn/hc_signatureSafeOverride_seed0_proof_strategy/summary.json",
       "subproofs": [
         {
           "kind": "edb_fact",

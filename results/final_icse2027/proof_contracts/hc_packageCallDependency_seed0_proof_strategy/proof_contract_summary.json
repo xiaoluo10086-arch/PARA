@@ -4,7 +4,7 @@
     {
       "split_name": "hc_packageCallDependency_seed0_proof_strategy",
       "contract_index": 0,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_000.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_000.json",
       "query": "packageCallDependency(org_springframework_web_reactive_socket_server_support,org_springframework_web_server)",
       "gold_label": "positive",
       "status": "SUPPORTED",
@@ -18,7 +18,7 @@
     {
       "split_name": "hc_packageCallDependency_seed0_proof_strategy",
       "contract_index": 1,
-      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_001.json",
+      "contract_file": "artifacts/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_001.json",
       "query": "packageCallDependency(org_springframework_web_reactive_function_client_ClientHttpObservationDocumentation,org_springframework_http_server_reactive)",
       "gold_label": "negative",
       "status": "INCONCLUSIVE",

@@ -174,6 +174,23 @@ def sanitize_text(text: str | None, source_root: Path) -> str:
     sanitized = sanitized.replace(str(Path.home()), "<HOME>")
     sanitized = sanitized.replace("\\", "/")
     sanitized = WORKSPACE_RE.sub("<WORKSPACE_ROOT>", sanitized)
+    sanitized = sanitized.replace(
+        "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2",
+        "<ARTIFACT_ROOT>/artifacts/proof_strategy_agent",
+    )
+    sanitized = sanitized.replace(
+        "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2",
+        "artifacts/proof_strategy_agent",
+    )
+    sanitized = sanitized.replace(
+        "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027",
+        "<ARTIFACT_ROOT>/artifacts/paper_final_icse2027",
+    )
+    sanitized = sanitized.replace(
+        "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027",
+        "artifacts/paper_final_icse2027",
+    )
+    sanitized = sanitized.replace("<HOME>/ILPandLLM", "<ARTIFACT_ROOT>")
     return ABS_PATH_RE.sub("<ABSOLUTE_PATH>", sanitized)
 
 
