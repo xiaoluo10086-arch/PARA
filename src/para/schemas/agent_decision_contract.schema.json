@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PARA Agent Decision Contract",
+  "type": "object",
+  "required": ["trace_id", "target", "strategy_id", "decisions", "verifier_diagnostic"],
+  "properties": {
+    "trace_id": {"type": "string"},
+    "target": {"type": "string"},
+    "strategy_id": {"type": "string"},
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "action", "rationale", "payload"],
+        "properties": {
+          "step": {"type": "integer"},
+          "action": {"type": "string"},
+          "rationale": {"type": "string"},
+          "payload": {"type": "object"}
+        }
+      }
+    },
+    "verifier_diagnostic": {
+      "type": "object",
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {"type": "string"},
+        "reason": {"type": "string"},
+        "positive_coverage": {"type": ["number", "null"]},
+        "negative_contamination": {"type": ["number", "null"]},
+        "suggested_repair": {"type": ["string", "null"]},
+        "missing_relation_types": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "contract_kind": "para_proof_contract",
+  "split_name": "hc_interfaceOverride_seed0_proof_strategy",
+  "manifest": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_proof_strategy_manifest.json",
+  "task_dir": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/splits/hc_interfaceOverride_seed0_proof_strategy/test_task",
+  "rule_library": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/rule_libraries/hc_interfaceOverride_seed0_proof_strategy_rule_library.json",
+  "query": "interfaceOverride(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)",
+  "explicit_gold_label": "positive",
+  "status": "SUPPORTED",
+  "status_category": "accepted_bounded_positive_proof",
+  "reason": "at least one bounded proof tree supports the query",
+  "selected_rule": "interfaceOverride(A,B) :- containsMethod(V1,A),implementsInterface(V1,V2),containsMethod(V2,B),methodName(A,C1),methodName(B,C1),methodArity(A,C2),methodArity(B,C2) [0.944].",
+  "selected_rule_metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "proof_contract": {
+    "idb_derivation": {
+      "kind": "derived_rule",
+      "goal": "interfaceOverride(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)",
+      "rule": "interfaceOverride(A,B) :- containsMethod(V1,A),implementsInterface(V1,V2),containsMethod(V2,B),methodName(A,C1),methodName(B,C1),methodArity(A,C2),methodArity(B,C2) [0.944].",
+      "rule_f1": 1.0,
+      "score": 1.0,
+      "confidence_aggregation": "min",
+      "depth": 0,
+      "source_summary": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/learn/hc_interfaceOverride_seed0_proof_strategy/summary.json",
+      "subproofs": [
+        {
+          "kind": "edb_fact",
+          "goal": "containsMethod(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata)",
+          "fact": "containsMethod(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "implementsInterface(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition)",
+          "fact": "implementsInterface(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "containsMethod(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)",
+          "fact": "containsMethod(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "methodName(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,name_getFactoryMethodMetadata)",
+          "fact": "methodName(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,name_getFactoryMethodMetadata)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "methodName(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata,name_getFactoryMethodMetadata)",
+          "fact": "methodName(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata,name_getFactoryMethodMetadata)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "methodArity(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,arity_0)",
+          "fact": "methodArity(org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata,arity_0)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "methodArity(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata,arity_0)",
+          "fact": "methodArity(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata,arity_0)",
+          "score": 1.0
+        }
+      ]
+    },
+    "supporting_edb_facts": [
+      "containsMethod(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_context_annotation_ScannedGenericBeanDefinition_getFactoryMethodMetadata)",
+      "implementsInterface(org_springframework_context_annotation_ScannedGenericBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition)",
+      "containsMethod(org_springframework_beans_factory_annotation_AnnotatedBeanDefinition,org_springframework_beans_factory_annotation_AnnotatedBeanDefinition_getFactoryMethodMetadata)"
+    ],
+    "path_programs": [],
+    "path_evidence": [],
+    "proof_score": 1.0,
+    "evidence_count": 1
+  },
+  "validation_context": {
+    "threshold": 0.8,
+    "reasoning_mode": "bounded_backward_chaining",
+    "max_depth": 7,
+    "max_proofs": 3,
+    "applicable_rule_count": 1,
+    "dependency_graph": {
+      "idb_predicates": [
+        "interfaceOverride/2"
+      ],
+      "edb_predicates": [
+        "containsMethod/2",
+        "implementsInterface/2",
+        "methodArity/2",
+        "methodName/2"
+      ],
+      "dependencies": {
+        "interfaceOverride/2": [
+          {
+            "predicate": "containsMethod/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "implementsInterface/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "methodName/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "methodArity/2",
+            "kind": "EDB"
+          }
+        ]
+      },
+      "recursive_predicates": []
+    },
+    "search_stats": {
+      "goal_calls": 8,
+      "edb_candidate_count": 7,
+      "depth_limit_hits": 0,
+      "cycle_prunes": 0,
+      "state_limit_hits": 0,
+      "proof_limit_hits": 0,
+      "max_depth_observed": 1,
+      "normal_completion": true,
+      "proofs_found": 1,
+      "termination_reason": "proof_found"
+    },
+    "runtime_seconds": 0.0004391730180941522,
+    "shared_engine_build_seconds": 2.911635736003518
+  },
+  "decision_semantics": {
+    "SUPPORTED": "a bounded positive proof exists",
+    "INCONCLUSIVE": "no bounded positive proof was found",
+    "UNSUPPORTED": "reserved for an explicit negative proof",
+    "negative_labels_used_for_decision": false
+  },
+  "review_obligation": null,
+  "boundary_statement": "The contract certifies a bounded symbolic support trace over the extracted EDB facts. It is not a completeness proof over unextracted or runtime-only semantics."
+}

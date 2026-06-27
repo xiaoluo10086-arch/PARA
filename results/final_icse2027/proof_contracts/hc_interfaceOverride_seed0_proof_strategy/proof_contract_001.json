@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "contract_kind": "para_proof_contract",
+  "split_name": "hc_interfaceOverride_seed0_proof_strategy",
+  "manifest": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_interfaceOverride_seed0_proof_strategy_manifest.json",
+  "task_dir": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/splits/hc_interfaceOverride_seed0_proof_strategy/test_task",
+  "rule_library": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/rule_libraries/hc_interfaceOverride_seed0_proof_strategy_rule_library.json",
+  "query": "interfaceOverride(org_springframework_beans_factory_support_AbstractBeanDefinition_getInstanceSupplier,org_springframework_beans_factory_config_BeanDefinition_setDescription_String)",
+  "explicit_gold_label": "negative",
+  "status": "INCONCLUSIVE",
+  "status_category": "review_obligation",
+  "reason": "no bounded positive proof produced sufficient evidence",
+  "selected_rule": null,
+  "selected_rule_metrics": {
+    "f1": null,
+    "precision": null,
+    "recall": null
+  },
+  "proof_contract": {
+    "idb_derivation": null,
+    "supporting_edb_facts": [],
+    "path_programs": [],
+    "path_evidence": [],
+    "proof_score": null,
+    "evidence_count": 0
+  },
+  "validation_context": {
+    "threshold": 0.8,
+    "reasoning_mode": "bounded_backward_chaining",
+    "max_depth": 7,
+    "max_proofs": 3,
+    "applicable_rule_count": 1,
+    "dependency_graph": {
+      "idb_predicates": [
+        "interfaceOverride/2"
+      ],
+      "edb_predicates": [
+        "containsMethod/2",
+        "implementsInterface/2",
+        "methodArity/2",
+        "methodName/2"
+      ],
+      "dependencies": {
+        "interfaceOverride/2": [
+          {
+            "predicate": "containsMethod/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "implementsInterface/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "methodName/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "methodArity/2",
+            "kind": "EDB"
+          }
+        ]
+      },
+      "recursive_predicates": []
+    },
+    "search_stats": {
+      "goal_calls": 6,
+      "edb_candidate_count": 5,
+      "depth_limit_hits": 0,
+      "cycle_prunes": 0,
+      "state_limit_hits": 0,
+      "proof_limit_hits": 0,
+      "max_depth_observed": 1,
+      "normal_completion": true,
+      "proofs_found": 0,
+      "termination_reason": "exhausted_no_proof"
+    },
+    "runtime_seconds": 0.0002874560304917395,
+    "shared_engine_build_seconds": 2.911635736003518
+  },
+  "decision_semantics": {
+    "SUPPORTED": "a bounded positive proof exists",
+    "INCONCLUSIVE": "no bounded positive proof was found",
+    "UNSUPPORTED": "reserved for an explicit negative proof",
+    "negative_labels_used_for_decision": false
+  },
+  "review_obligation": "No bounded positive proof was produced; inspect extractor coverage, rule expressibility, and bounds.",
+  "boundary_statement": "The contract certifies a bounded symbolic support trace over the extracted EDB facts. It is not a completeness proof over unextracted or runtime-only semantics."
+}

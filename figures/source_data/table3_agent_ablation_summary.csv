@@ -1,0 +1,13 @@
+target,arm,runs,executed,admitted,admission_rate,train_f1_mean,loop_outcomes
+canCallClass,cold_loop,3,3,0,0.0,,REJECTED_AFTER_VERIFIER_OBLIGATION
+canCallClass,cold_one_shot,3,3,0,0.0,,REJECTED_UNSAFE_OR_UNSUPPORTED
+canCallClass,memory_loop,3,3,2,0.6666666666666666,0.8095238095238095,PRESERVED_OR_ADMITTED;REJECTED_AFTER_VERIFIER_OBLIGATION
+canCallClass,memory_one_shot,3,3,2,0.6666666666666666,0.8095238095238095,PRESERVED_STRONG;REJECTED_UNSAFE_OR_UNSUPPORTED
+isAllowedToUse,cold_loop,3,3,0,0.0,,REJECTED_AFTER_VERIFIER_OBLIGATION
+isAllowedToUse,cold_one_shot,3,3,0,0.0,,REJECTED_UNSAFE_OR_UNSUPPORTED
+isAllowedToUse,memory_loop,3,3,3,1.0,0.9285441927857851,PRESERVED_OR_ADMITTED
+isAllowedToUse,memory_one_shot,3,3,3,1.0,0.9285441927857851,PRESERVED_STRONG
+overridesMethod,cold_loop,3,3,0,0.0,,REJECTED_AFTER_VERIFIER_OBLIGATION
+overridesMethod,cold_one_shot,3,3,0,0.0,,REJECTED_UNSAFE_OR_UNSUPPORTED
+overridesMethod,memory_loop,3,3,3,1.0,1.0,PRESERVED_OR_ADMITTED
+overridesMethod,memory_one_shot,3,3,3,1.0,1.0,PRESERVED_STRONG

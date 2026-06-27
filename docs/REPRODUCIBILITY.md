@@ -26,6 +26,10 @@ catalog maps every paper claim to its summary and generating script.
 
 Principal entry points:
 
+- `scripts/final_icse2027/export_public_artifacts.py`
+- `scripts/final_icse2027/build_unified_rerun_matrix.py`
+- `scripts/final_icse2027/build_high_complexity_multiseed_summary.py`
+- `scripts/final_icse2027/materialize_proof_contracts.py`
 - `scripts/run_learn_then_reason.py`
 - `scripts/run_matched_popper_baseline.py`
 - `scripts/run_direct_query_answering.py`
@@ -35,6 +39,15 @@ Principal entry points:
 
 All task, split, model endpoint, and output locations are command-line
 arguments. The scripts do not require the original authors' directory layout.
+
+The compact paper-facing evidence package can be regenerated from the frozen
+result bundle without API keys:
+
+```bash
+python scripts/final_icse2027/export_public_artifacts.py \
+  --source-results artifacts/paper_final_icse2027/results \
+  --output-dir results/final_icse2027
+```
 
 ## 4. LLM Configuration
 

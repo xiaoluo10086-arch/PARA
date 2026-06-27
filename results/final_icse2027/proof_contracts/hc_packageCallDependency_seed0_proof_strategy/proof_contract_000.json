@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "contract_kind": "para_proof_contract",
+  "split_name": "hc_packageCallDependency_seed0_proof_strategy",
+  "manifest": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/manifests/hc_packageCallDependency_seed0_proof_strategy_manifest.json",
+  "task_dir": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/splits/hc_packageCallDependency_seed0_proof_strategy/test_task",
+  "rule_library": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/rule_libraries/hc_packageCallDependency_seed0_proof_strategy_rule_library.json",
+  "query": "packageCallDependency(org_springframework_web_reactive_socket_server_support,org_springframework_web_server)",
+  "explicit_gold_label": "positive",
+  "status": "SUPPORTED",
+  "status_category": "accepted_bounded_positive_proof",
+  "reason": "at least one bounded proof tree supports the query",
+  "selected_rule": "packageCallDependency(A,B) :- containsClass(A,V1),containsMethod(V1,V2),callsMethod(V2,V3),containsMethod(V4,V3),containsClass(B,V4),importsClass(V1,V4) [0.944].",
+  "selected_rule_metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "proof_contract": {
+    "idb_derivation": {
+      "kind": "derived_rule",
+      "goal": "packageCallDependency(org_springframework_web_reactive_socket_server_support,org_springframework_web_server)",
+      "rule": "packageCallDependency(A,B) :- containsClass(A,V1),containsMethod(V1,V2),callsMethod(V2,V3),containsMethod(V4,V3),containsClass(B,V4),importsClass(V1,V4) [0.944].",
+      "rule_f1": 1.0,
+      "score": 1.0,
+      "confidence_aggregation": "min",
+      "depth": 0,
+      "source_summary": "<HOME>/ILPandLLM/Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/proof_strategy_agent_v2/results/high_complexity_hard2_three_targets_seed0/learn/hc_packageCallDependency_seed0_proof_strategy/summary.json",
+      "subproofs": [
+        {
+          "kind": "edb_fact",
+          "goal": "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+          "fact": "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map)",
+          "fact": "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+          "fact": "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "containsMethod(org_springframework_web_server_ServerWebExchange,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+          "fact": "containsMethod(org_springframework_web_server_ServerWebExchange,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "containsClass(org_springframework_web_server,org_springframework_web_server_ServerWebExchange)",
+          "fact": "containsClass(org_springframework_web_server,org_springframework_web_server_ServerWebExchange)",
+          "score": 1.0
+        },
+        {
+          "kind": "edb_fact",
+          "goal": "importsClass(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_server_ServerWebExchange)",
+          "fact": "importsClass(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_server_ServerWebExchange)",
+          "score": 1.0
+        }
+      ]
+    },
+    "supporting_edb_facts": [
+      "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+      "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map)",
+      "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map,org_springframework_web_server_ServerWebExchange_getLogPrefix)"
+    ],
+    "path_programs": [
+      [
+        [
+          "containsClass",
+          "fwd"
+        ],
+        [
+          "containsMethod",
+          "fwd"
+        ],
+        [
+          "callsMethod",
+          "fwd"
+        ],
+        [
+          "containsMethod",
+          "rev"
+        ],
+        [
+          "containsClass",
+          "rev"
+        ]
+      ]
+    ],
+    "path_evidence": [
+      [
+        "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+        "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map)",
+        "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+        "containsMethod(org_springframework_web_server_ServerWebExchange,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+        "containsClass(org_springframework_web_server,org_springframework_web_server_ServerWebExchange)"
+      ],
+      [
+        "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+        "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map)",
+        "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_createHandshakeInfo_ServerWebExchange_ServerHttpRequest_String_Map,org_springframework_web_server_ServerWebExchange_getPrincipal)",
+        "containsMethod(org_springframework_web_server_ServerWebExchange,org_springframework_web_server_ServerWebExchange_getPrincipal)",
+        "containsClass(org_springframework_web_server,org_springframework_web_server_ServerWebExchange)"
+      ],
+      [
+        "containsClass(org_springframework_web_reactive_socket_server_support,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService)",
+        "containsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService,org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_handleBadRequest_ServerWebExchange_String)",
+        "callsMethod(org_springframework_web_reactive_socket_server_support_HandshakeWebSocketService_handleBadRequest_ServerWebExchange_String,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+        "containsMethod(org_springframework_web_server_ServerWebExchange,org_springframework_web_server_ServerWebExchange_getLogPrefix)",
+        "containsClass(org_springframework_web_server,org_springframework_web_server_ServerWebExchange)"
+      ]
+    ],
+    "proof_score": 1.0,
+    "evidence_count": 3
+  },
+  "validation_context": {
+    "threshold": 0.8,
+    "reasoning_mode": "bounded_backward_chaining",
+    "max_depth": 7,
+    "max_proofs": 3,
+    "applicable_rule_count": 1,
+    "dependency_graph": {
+      "idb_predicates": [
+        "packageCallDependency/2"
+      ],
+      "edb_predicates": [
+        "callsMethod/2",
+        "containsClass/2",
+        "containsMethod/2",
+        "importsClass/2"
+      ],
+      "dependencies": {
+        "packageCallDependency/2": [
+          {
+            "predicate": "containsClass/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "containsMethod/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "callsMethod/2",
+            "kind": "EDB"
+          },
+          {
+            "predicate": "importsClass/2",
+            "kind": "EDB"
+          }
+        ]
+      },
+      "recursive_predicates": []
+    },
+    "search_stats": {
+      "goal_calls": 101,
+      "edb_candidate_count": 229,
+      "depth_limit_hits": 0,
+      "cycle_prunes": 0,
+      "state_limit_hits": 0,
+      "proof_limit_hits": 2,
+      "max_depth_observed": 1,
+      "normal_completion": true,
+      "proofs_found": 3,
+      "termination_reason": "proof_found"
+    },
+    "runtime_seconds": 0.0034651979804039,
+    "shared_engine_build_seconds": 2.8150108630070463
+  },
+  "decision_semantics": {
+    "SUPPORTED": "a bounded positive proof exists",
+    "INCONCLUSIVE": "no bounded positive proof was found",
+    "UNSUPPORTED": "reserved for an explicit negative proof",
+    "negative_labels_used_for_decision": false
+  },
+  "review_obligation": null,
+  "boundary_statement": "The contract certifies a bounded symbolic support trace over the extracted EDB facts. It is not a completeness proof over unextracted or runtime-only semantics."
+}

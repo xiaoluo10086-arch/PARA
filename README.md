@@ -1,15 +1,17 @@
 # PARA
 
-**Path Accountable Reasoning for Agentic Rule-Learning**
+**Path-Accountable Proof Trees for Software Architecture Relation Reasoning**
 
-PARA uses an LLM to propose a bounded portfolio of typed path programs, verifies
-the resulting Horn-rule candidates symbolically, and answers held-out relation
-queries with either:
+PARA turns software architecture relation queries into bounded, inspectable
+proof obligations. A verifier-governed strategy agent proposes typed path
+programs, the symbolic verifier admits only candidates supported by project
+facts, and the proof engine answers relation queries with either:
 
 - `SUPPORTED` and a finite proof tree grounded in project facts; or
 - `INCONCLUSIVE` when no proof is found within the configured bounds.
 
-The rule is an intermediate artifact. The proof trace is the reasoning output.
+The rule is an intermediate artifact. The proof tree and its decision contract
+are the reasoning output.
 
 ## Repository Contents
 
@@ -17,8 +19,8 @@ The rule is an intermediate artifact. The proof trace is the reasoning output.
 src/para/                 Core planner, verifier, compiler, and proof engine
 scripts/                  Paper experiment and audit entry points
 data/example/             Small self-contained runnable task
-results/                  Curated paper summaries and proof-audit samples
-figures/                  Figure source data and generation script
+results/                  Curated paper summaries, proof contracts, and audits
+figures/                  Figure source data, scripts, and final paper figures
 docs/                     Reproduction, data, and repository-scope notes
 tests/                    Public smoke tests
 ```
@@ -83,13 +85,18 @@ experiments. Set `PARA_POPPER_PATH=/path/to/popper.py` when needed.
 
 Start with:
 
+- [Anonymous artifact README](docs/ANON_ARTIFACT_README.md)
 - [Experiment evidence catalog](docs/EXPERIMENT_EVIDENCE_CATALOG.md)
 - [Reproducibility guide](docs/REPRODUCIBILITY.md)
 - [Data and artifact guide](docs/DATA.md)
+- [Architecture description](docs/PARA_ARCHITECTURE_DESCRIPTION.md)
+- [End-to-end case figure description](docs/PARA_END_TO_END_CASE_FIGURE_DESCRIPTION.md)
 
-Curated summaries in `results/` are small enough for Git. Full frozen task
-splits and raw run artifacts are distributed separately because they are large
-derived files.
+Curated summaries in `results/` are small enough for Git. The latest
+paper-facing package is in `results/final_icse2027/`, including unified rerun
+tables, high-complexity multi-seed summaries, and representative proof
+contracts. Full frozen task splits and raw run artifacts are distributed
+separately because they are large derived files.
 
 ## Review Anonymity
 

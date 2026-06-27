@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use PARA, please cite the accompanying paper and this software."
-title: "PARA: Path Accountable Reasoning for Agentic Rule-Learning"
+title: "PARA: Path-Accountable Proof Trees for Software Architecture Relation Reasoning"
 type: software
 authors:
   - name: "PARA Authors"

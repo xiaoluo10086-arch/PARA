@@ -73,8 +73,8 @@ with score 0.944.
 
 ## Matched Popper Baseline
 
-We also ran the pure Popper baseline on the same v2 train split with the same
-target predicate and background facts.  This run uses the corrected negative
+We also ran the pure Popper baseline on the same corrected train split with the
+same target predicate and background facts.  This run uses the corrected negative
 set above, which includes same-module pairs without an import edge and
 therefore prevents the shortcut rule `same module => positive`.
 
@@ -93,14 +93,14 @@ as an ILP boundary result: the relation is learnable from the graph, but the
 unconstrained multi-clause ILP program does not preserve the project-specific
 constraint cleanly on held-out queries.
 
-## Superseded v1 Note
+## Superseded Split Note
 
-The earlier `project_specific_spring_policy/` run is superseded by this v2
-design.  In v1, negatives were limited to cross-module import edges.  Popper
-could therefore learn a module-only shortcut, which did not test whether a
-method must combine import evidence with the project-specific module
-constraint.  The v2 negative set adds same-module package pairs without import
-edges and should be used for paper claims.
+The earlier `project_specific_spring_policy/` run is superseded by this
+corrected split design. In the earlier split, negatives were limited to
+cross-module import edges. Popper could therefore learn a module-only shortcut,
+which did not test whether a method must combine import evidence with the
+project-specific module constraint. The corrected negative set adds same-module
+package pairs without import edges and should be used for paper claims.
 
 ## Interpretation
 

@@ -1,0 +1,13 @@
+project,target,method,seeds,admission_rate,mean_train_f1,mean_best_candidate_f1,mean_heldout_precision,mean_heldout_recall,mean_accuracy,mean_runtime_seconds,evidence_layer
+Spring,canCallClass,graphrag,3,1.0,1.0000,1.0000,1.0000,1.0000,1.0000,78.6199,learn/admission rerun; held-out metrics reused
+Spring,canCallClass,proof_strategy,3,0.6667,0.7948,0.7948,0.6667,0.4578,0.8193,73.9444,learn/admission rerun; held-out metrics reused
+Spring,canCallClass,typed_heuristic,3,1.0,1.0000,1.0000,1.0000,1.0000,1.0000,69.9673,learn/admission rerun; held-out metrics reused
+Spring,isAllowedToUse,graphrag,3,1.0,0.9285,0.9285,1.0000,0.8244,0.9415,224.9496,learn/admission rerun; held-out metrics reused
+Spring,isAllowedToUse,proof_strategy,3,1.0,0.9285,0.9285,1.0000,0.8244,0.9415,75.2441,learn/admission rerun; held-out metrics reused
+Spring,isAllowedToUse,typed_heuristic,3,1.0,0.9285,0.9285,1.0000,0.8244,0.9415,110.2540,learn/admission rerun; held-out metrics reused
+Spring,overridesMethod,graphrag,3,1.0,1.0000,1.0000,0.9956,1.0000,0.9985,97.7333,learn/admission rerun; held-out metrics reused
+Spring,overridesMethod,proof_strategy,3,1.0,0.9457,0.9457,0.9943,0.8778,0.9578,76.0169,learn/admission rerun; held-out metrics reused
+Spring,overridesMethod,typed_heuristic,3,0.3333,0.7993,0.7993,0.3333,0.2111,0.7370,62.3035,learn/admission rerun; held-out metrics reused
+Spring,packageCallDependency,graphrag,3,0.0,,0.6993,,,,137.8216,rule-level held-out plus representative proof contracts
+Spring,packageCallDependency,proof_strategy,3,1.0,1.0000,1.0000,1.0000,1.0000,1.0000,63.8901,rule-level held-out plus representative proof contracts
+Spring,packageCallDependency,typed_heuristic,3,0.0,,0.1829,,,,59.5367,rule-level held-out plus representative proof contracts

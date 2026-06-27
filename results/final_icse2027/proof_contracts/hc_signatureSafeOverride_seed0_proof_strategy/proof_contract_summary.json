@@ -1,0 +1,33 @@
+{
+  "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
+  "rows": [
+    {
+      "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
+      "contract_index": 0,
+      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_000.json",
+      "query": "signatureSafeOverride(org_springframework_web_reactive_result_view_AbstractUrlBasedView_toString,org_springframework_web_reactive_result_view_AbstractView_toString)",
+      "gold_label": "positive",
+      "status": "SUPPORTED",
+      "status_category": "accepted_bounded_positive_proof",
+      "selected_rule": "signatureSafeOverride(A,B) :- containsMethod(V1,A),inheritsClass(V1,V2),containsMethod(V2,B),methodName(A,C1),methodName(B,C1),methodArity(A,C2),methodArity(B,C2) [0.944].",
+      "evidence_count": 1,
+      "supporting_edb_fact_count": 3,
+      "path_evidence_count": 0,
+      "review_obligation": null
+    },
+    {
+      "split_name": "hc_signatureSafeOverride_seed0_proof_strategy",
+      "contract_index": 1,
+      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_signatureSafeOverride_seed0_proof_strategy/proof_contract_001.json",
+      "query": "signatureSafeOverride(org_springframework_beans_PropertyValue_setConvertedValue_Object,org_springframework_beans_BeanMetadataAttributeAccessor_setAttribute_String_Object)",
+      "gold_label": "negative",
+      "status": "INCONCLUSIVE",
+      "status_category": "review_obligation",
+      "selected_rule": null,
+      "evidence_count": 0,
+      "supporting_edb_fact_count": 0,
+      "path_evidence_count": 0,
+      "review_obligation": "No bounded positive proof was produced; inspect extractor coverage, rule expressibility, and bounds."
+    }
+  ]
+}

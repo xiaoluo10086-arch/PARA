@@ -5,6 +5,8 @@
 - Final PARA implementation.
 - Scripts required to reproduce reported experiments.
 - Frozen, valid paper summaries and sampled proof traces.
+- Sanitized final paper evidence under `results/final_icse2027/`.
+- ProofStrategy and decision-contract schemas.
 - Small self-contained example data.
 - Figure source data and plotting code.
 - Installation, data, and reproducibility documentation.

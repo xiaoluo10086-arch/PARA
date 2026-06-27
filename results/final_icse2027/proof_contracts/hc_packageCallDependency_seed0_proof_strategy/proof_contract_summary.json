@@ -1,0 +1,33 @@
+{
+  "split_name": "hc_packageCallDependency_seed0_proof_strategy",
+  "rows": [
+    {
+      "split_name": "hc_packageCallDependency_seed0_proof_strategy",
+      "contract_index": 0,
+      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_000.json",
+      "query": "packageCallDependency(org_springframework_web_reactive_socket_server_support,org_springframework_web_server)",
+      "gold_label": "positive",
+      "status": "SUPPORTED",
+      "status_category": "accepted_bounded_positive_proof",
+      "selected_rule": "packageCallDependency(A,B) :- containsClass(A,V1),containsMethod(V1,V2),callsMethod(V2,V3),containsMethod(V4,V3),containsClass(B,V4),importsClass(V1,V4) [0.944].",
+      "evidence_count": 3,
+      "supporting_edb_fact_count": 3,
+      "path_evidence_count": 3,
+      "review_obligation": null
+    },
+    {
+      "split_name": "hc_packageCallDependency_seed0_proof_strategy",
+      "contract_index": 1,
+      "contract_file": "Agent‑Symbolic_Hybrid_Rule_Learning/paper_reasoning/paper_final_icse2027/results/high_complexity_three_target_contracts_20260627/hc_packageCallDependency_seed0_proof_strategy/proof_contract_001.json",
+      "query": "packageCallDependency(org_springframework_web_reactive_function_client_ClientHttpObservationDocumentation,org_springframework_http_server_reactive)",
+      "gold_label": "negative",
+      "status": "INCONCLUSIVE",
+      "status_category": "review_obligation",
+      "selected_rule": null,
+      "evidence_count": 0,
+      "supporting_edb_fact_count": 0,
+      "path_evidence_count": 0,
+      "review_obligation": "No bounded positive proof was produced; inspect extractor coverage, rule expressibility, and bounds."
+    }
+  ]
+}

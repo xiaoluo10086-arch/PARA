@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PARA ProofStrategy",
+  "type": "object",
+  "required": [
+    "strategy_id",
+    "target",
+    "path_programs",
+    "threshold_config",
+    "search_bounds",
+    "audit_config",
+    "confidence_profile"
+  ],
+  "properties": {
+    "strategy_id": {"type": "string"},
+    "target": {"type": "string"},
+    "path_programs": {
+      "type": "array",
+      "items": {"type": "array", "items": {"type": "string"}}
+    },
+    "threshold_config": {
+      "type": "object",
+      "required": ["accept", "refine", "prefer_recall_over_precision"],
+      "properties": {
+        "accept": {"type": "number", "minimum": 0, "maximum": 1},
+        "refine": {"type": "number", "minimum": 0, "maximum": 1},
+        "prefer_recall_over_precision": {"type": "boolean"}
+      }
+    },
+    "search_bounds": {
+      "type": "object",
+      "required": ["max_depth", "max_proof_trees", "max_states_per_node", "max_edges_per_node"],
+      "properties": {
+        "max_depth": {"type": "integer", "minimum": 1, "maximum": 8},
+        "max_proof_trees": {"type": "integer", "minimum": 1, "maximum": 20},
+        "max_states_per_node": {"type": "integer", "minimum": 1},
+        "max_edges_per_node": {"type": "integer", "minimum": 1}
+      }
+    },
+    "audit_config": {
+      "type": "object",
+      "required": ["counterfactual_sample_size", "near_miss_stress_enabled", "proof_tree_audit_depth"],
+      "properties": {
+        "counterfactual_sample_size": {"type": "integer", "minimum": 0},
+        "near_miss_stress_enabled": {"type": "boolean"},
+        "proof_tree_audit_depth": {"type": "integer", "minimum": 0}
+      }
+    },
+    "intent_profile": {"type": ["object", "null"]},
+    "confidence_profile": {
+      "type": "object",
+      "required": ["score", "mode", "confidence_drivers", "rationale"],
+      "properties": {
+        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "mode": {"enum": ["conservative", "balanced", "aggressive"]},
+        "confidence_drivers": {"type": "object"},
+        "rationale": {"type": "string"}
+      }
+    },
+    "selected_predicates": {"type": "array", "items": {"type": "string"}},
+    "candidate_rules": {"type": "array", "items": {"type": "string"}},
+    "fallback_strategy": {"type": "string"},
+    "memory_enabled": {"type": "boolean"},
+    "rationale": {"type": "string"}
+  }
+}

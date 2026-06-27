@@ -1,0 +1,10 @@
+target,arm,seeds,valid_cells,admitted,admission_rate,valid_admission_rate,train_f1_mean,train_f1_sd,elapsed_seconds_mean,elapsed_seconds_sd,status_counts,status_brief
+signatureSafeOverride,proof_strategy,3,3,3,1.000,1.000,1.000,0.000,63.469,1.262,{'ok': 3},ok:3
+signatureSafeOverride,heuristic,3,3,3,1.000,1.000,0.862,0.046,66.471,0.107,{'ok': 3},ok:3
+signatureSafeOverride,graphrag,3,3,3,1.000,1.000,1.000,0.000,122.515,15.516,{'ok': 3},ok:3
+interfaceOverride,proof_strategy,3,3,3,1.000,1.000,1.000,0.000,62.332,0.759,{'ok': 3},ok:3
+interfaceOverride,heuristic,3,3,3,1.000,1.000,1.000,0.000,68.724,2.052,{'ok': 3},ok:3
+interfaceOverride,graphrag,3,3,3,1.000,1.000,1.000,0.000,329.181,262.493,{'ok': 3},ok:3
+packageCallDependency,proof_strategy,3,3,3,1.000,1.000,1.000,0.000,64.036,0.311,{'ok': 3},ok:3
+packageCallDependency,heuristic,3,3,0,0.000,0.000,,,58.964,0.113,{'candidate_rejected': 3},candidate_rejected:3
+packageCallDependency,graphrag,3,3,1,0.333,0.333,0.855,0.000,205.386,204.869,"{'candidate_rejected': 2, 'ok': 1}",candidate_rejected:2;ok:1
